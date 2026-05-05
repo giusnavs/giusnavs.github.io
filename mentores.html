@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mentores y Aliados | RZ Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                                "colors": {
+                    "primary": "#E61876",
+                    "primary-dim": "#a91054",
+                    "primary-container": "#f9c1d9",
+                    "primary-fixed": "#f48ab6",
+                    "primary-fixed-dim": "#ef5393",
+                    "inverse-primary": "#eb2f7f",
+                    "surface-tint": "#E61876",
+                    "on-primary": "#fde4ef",
+                    "on-primary-container": "#870d43",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-fixed-variant": "#870d43",
+                    "secondary": "#1e40af",
+                    "secondary-dim": "#1E3A8A",
+                    "secondary-container": "#dbeafe",
+                    "secondary-fixed": "#dbeafe",
+                    "secondary-fixed-dim": "#93c5fd",
+                    "on-secondary": "#eff6ff",
+                    "on-secondary-container": "#1E3A8A",
+                    "on-secondary-fixed": "#1E3A8A",
+                    "on-secondary-fixed-variant": "#1e40af",
+                    "tertiary": "#1e40af",
+                    "tertiary-dim": "#1E3A8A",
+                    "tertiary-container": "#dbeafe",
+                    "tertiary-fixed": "#dbeafe",
+                    "tertiary-fixed-dim": "#93c5fd",
+                    "on-tertiary": "#eff6ff",
+                    "on-tertiary-container": "#1E3A8A",
+                    "on-tertiary-fixed": "#1E3A8A",
+                    "on-tertiary-fixed-variant": "#1e40af",
+                    "warning": "#F59E0B",
+                    "warning-dim": "#d97706",
+                    "warning-container": "#fef3c7",
+                    "on-warning": "#ffffff",
+                    "on-warning-container": "#92400e",
+                    "success": "#16A34A",
+                    "success-dim": "#15803d",
+                    "success-container": "#dcfce7",
+                    "on-success": "#ffffff",
+                    "on-success-container": "#166534",
+                    "error": "#DC2626",
+                    "error-dim": "#b91c1c",
+                    "error-container": "#fecaca",
+                    "on-error": "#fef2f2",
+                    "on-error-container": "#991b1b",
+                    "background": "#F8FAFC",
+                    "surface": "#F8FAFC",
+                    "surface-bright": "#F8FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f1f5f9",
+                    "surface-container": "#e5e7eb",
+                    "surface-container-high": "#d1d5db",
+                    "surface-container-highest": "#cbd5e1",
+                    "surface-variant": "#e2e8f0",
+                    "on-surface": "#1F2937",
+                    "on-background": "#1F2937",
+                    "on-surface-variant": "#6b7280",
+                    "outline": "#9ca3af",
+                    "outline-variant": "#d1d5db",
+                    "inverse-surface": "#111827",
+                    "inverse-on-surface": "#d1d5db"
+            },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    @font-face {
+        font-family: 'Lufga';
+        src: url('./fonts/Lufga-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_4px_20px_rgba(230,24,118,0.08)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+  <a href="index.html" class="flex items-center"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-12 w-auto"></a>
+  <div class="hidden md:flex items-center gap-8 font-semibold">
+    <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
+    <a href="mentores.html" class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Mentores</a>
+    <a href="perks.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Perks y Alianzas</a>
+    <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
+    <a href="calendario.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Calendario</a>
+  </div>
+  <button class="bg-[#E61876] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform">Registrarme</button>
+</div>
+</nav>
+<main class="pt-24 pb-12">
+<!-- Hero Section -->
+<header class="px-8 mb-16 relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 py-12">
+<div class="flex-1 space-y-6">
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-container/20 text-primary font-bold text-sm uppercase tracking-widest" style="">
+                        Ecosistema de Crecimiento
+                    </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-tight" style="">
+                        Mentores y <span class="text-primary italic" style="">Aliados</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed" style="">
+                        Conecta con expertos dispuestos a guiar tu camino. Encuentra ayuda directa, asesoría técnica y alianzas estratégicas para transformar tu visión en realidad.
+                    </p>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square rounded-3xl bg-secondary-container/30 relative overflow-hidden rotate-3 scale-95">
+<img alt="Collaborative meeting" class="w-full h-full object-cover" data-alt="Modern collaborative workspace with diverse group of professionals discussing strategy over coffee in bright sunlit architectural environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSxZiennag9Oll7OiOgltkq-2jgI9Zcij86GNa-_kb8y2vz2yXyBbDNbYhLHtAda0ojsXOz_spbIstLBvex8TYcVuCkJI5wVgYOW_8kHwK0IK0QAGHusfe74clFLWpw-lh_BKS9IB-pzto-RJESR4PXBoRkqSjmW3_X8i6nhOBsLQukX5Z6R1S8fMyNIM4oHslHsNAKD3jmGakVtECYJTPpyEkxo0VrH7OebJ5Zcta1AXGOv7l8pUlIS1qGya57C0Qph8xZFNnY8dB" style="">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl -rotate-6 hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="lightbulb" style="">lightbulb</span>
+</div>
+<div>
+<div class="text-sm font-bold" style="">Asesoría Directa</div>
+<div class="text-xs text-on-surface-variant" style="">+250 Mentores activos</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Filters & Search Shell -->
+<section class="px-8 mb-12">
+<div class="max-w-7xl mx-auto bg-surface-container-low p-4 rounded-3xl md:rounded-full shadow-sm flex flex-col lg:flex-row items-center gap-4">
+<!-- Toggle Tabs -->
+<div class="flex flex-wrap items-center bg-surface-container-high rounded-full p-1.5 w-full lg:w-auto">
+<button class="px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface font-bold shadow-sm transition-all text-sm" style="">Todos</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface transition-all text-sm font-medium" style="">Mentores</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface transition-all text-sm font-medium" style="">Talleristas</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface transition-all text-sm font-medium" style="">Aliados</button>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-4 w-full lg:flex-1">
+<!-- Specialty Dropdown -->
+<div class="relative w-full md:w-64">
+<select class="w-full bg-surface-container-lowest border-none rounded-full px-6 py-3 text-on-surface focus:ring-2 focus:ring-primary appearance-none">
+<option>Área de Especialidad</option>
+<option>Tecnología</option>
+<option>Finanzas</option>
+<option>Impacto Social</option>
+<option>Diseño y UI</option>
+<option>Marketing</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more" style="">expand_more</span>
+</div>
+</div>
+<!-- Free Search -->
+<div class="relative flex-1 w-full">
+<span class="absolute left-5 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant" data-icon="search" style="">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full pl-12 pr-6 py-3 text-on-surface focus:ring-2 focus:ring-primary" placeholder="Búsqueda libre por nombre o habilidad..." type="text">
+</div>
+</div>
+</div>
+</section>
+<!-- Directory Grid -->
+<section class="px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Mentor Card (Yellow theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-tertiary-fixed transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Mentor Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional woman in business attire smiling warmly in a bright office setting with bokeh light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMfwkqMEEZ62kRq5WlI9IG5jJGtAHYzbS7wM6zoDO5l-iHVcTDeOW8LnZdq5seZbwZUqgh9Ilaw3aDboDpEoE3jooqQHvODmn2kd3OvLE69oopvz5BaOUd-Cq1kUmv8Ju0OXnypJzPzY4uGYV172GrWFp0RqRaQk9T0ZsC08gJdFRq6US8dRPCSQY1Ujw4jWJfevw3lxTkSoXro73kAsfMp51m0jIVk8te60t28oVmNM0LCpc7MfqtF8_maXIlhYFvp-YCVdPsBF1S" style="">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Mentor
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Dra. Beatriz Solís</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Universidad de Guadalajara • Innovación Educativa</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Liderazgo</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Estrategia</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Pitch Deck</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Aliado Card (Turquoise theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-turquoise transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Aliado Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional man in a tailored suit posing confidently in a modern glass-walled corporate environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0TUHKagnPxgMCnLKtP2MW1CpeDM2DiHqLHoJlTKqsuTLwALVc9nuZAdr0syJv1fyIr_lj_6XD9RzNjFnlFBkmnWBjOwsTfist-zvt0RGqk78Xi_p7bGbhxlafl7M52p20Dvqou670XkZPL9H-nr8Dmbr00MKaonRzTHl9LgeqZdnrWW7g_IzhWSvde6Isr4tJ97g5snTDY4JYBaxeJfFIwKIM1MEpbS1YTDBROFUW16jOIpJe7z_Tg9B6KNxe0ngza47lJTW_3zcq" style="">
+<div class="absolute top-4 right-4 bg-[#2563eb] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Aliado
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Mtro. Ricardo Arceo</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Cámara de Comercio • Alianzas Estratégicas</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Networking</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">B2B</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Scaling</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Tallerista Card (Orange theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-secondary transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Tallerista Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Creative woman with glasses and colorful scarf smiling in an art studio filled with canvases and creative tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl_CdMmMtAEpqmJRTVpGqy7DLC58L89hvmrKNTPfU3vLR0iLLPBDJEgoQ3NGxJWeo4NqWUwzB0TTnjctPZftIOKyjA7x0mDJjE_CrWkzGTb6p5UcgSKcQw3Lx-YMU7Fpze5X7WPjhW2IsH9whZ4bzuXJ_II-2Vgn-rIj5TcV_EudycPPrNLZEVC3z7u0LZlUd_HgWa2UXqS5qY3sgOmeMecb_yI_hK6CK3cCFilwjkccvDfU7elZWDpqotROWWoZMjHbLpci9qTsDp" style="">
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Tallerista
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Lic. Sofia Méndez</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Zapopan Creativa • Metodologías Ágiles</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Design Thinking</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">UX</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Prototipado</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Second Row -->
+<!-- Mentor Card (Yellow theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-tertiary-fixed transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Mentor Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Charismatic man with gray hair and glasses smiling in a sun-drenched library or high-end office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFMxhwEOuWt_uPBf_VbsAVdfpdOgffyyTuM6OpxV3NDQgSRWXBXdLFGITPUffixyp_L25DJmMOr82hbZen7ZWoBilZ9xkS0adBz5TQxlVYGhs5hwl-HA4b9VuVmkObVc-mRPKfcLcdwJEZS8KW1kANOjjfDjoAXw5FnWhvc-wMjhkXK-Ly8kv7oP5qN-ByKrAjqVcWt2wkKPFuYomG73EPFpJiiMsFFuxI8hzM0PJWvnY2qEsYts4LU-G3CqA_d-MqejNMxj1L8XLT" style="">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Mentor
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Ing. Roberto Galván</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Tech Hub Zapopan • Inteligencia Artificial</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Python</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Big Data</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Cloud</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Tallerista Card (Orange theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-secondary transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Tallerista Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Elegant woman in creative professional workspace, thoughtful expression, soft natural window light hitting her face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmdl1y6hkQYCqbeELpJXv-Vm2tS_KlZaT1sUDI60rLTr8ZukFsGBeR9s1Rn6KrE2yttQIt8-9u72NVjh1NWLEgMQmdkzd-4GGmT3KcJXLOzTbv31L5MXWEqtleUI2Lk7RzYnQPg271mWVLazHbqaTBFiXmvz6okR0P-stGvuKdortSdHCVflJQcvaobrkMzXrkKceLHM1TeYqjQ0EIaevKmnWdhq2wVp8WKfb-gj0yWHcVEcpyAN1OV8bR7cUSPv8foEJWjre4aUAU" style="">
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Tallerista
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Mtra. Elena Castillo</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Centro Cultural • Gestión de Proyectos</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Agile</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">SCRUM</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Comunicación</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Aliado Card (Turquoise theme) -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-high hover:border-turquoise transition-all group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Aliado Portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional mid-career man in casual business wear standing in a vibrant startup incubator with colorful graphics on walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNUpTRQFdZAw2i1lFjffVYmrFePsTS2cnZIzq6ytlkvJDky0NoRRf6mLsuYTCpCszzUVvkin2B45pnDoeDTQLkXpWDdYr7lzHuoL3dZUQ_eJYrZTkwubCaSDzMzNwSIGYQzyfCVCNGLkAj1WkmRhf69sEizIA86JTS5RURf-oHchdu30Dn4FNQ8kBfPrzUFu77qBOzli48oiwoWd8aasRsrFisbqA-e5-B_ksETwOu3TYqcXzpy45jlGuDfDTwmZnHOAfb6v_w2cSi" style="">
+<div class="absolute top-4 right-4 bg-[#2563eb] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg" style="">
+                            Aliado
+                        </div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-extrabold text-on-surface mb-1" style="">Lic. Marco Polo V.</h3>
+<p class="text-on-surface-variant text-sm font-medium mb-4" style="">Exporta Jalisco • Comercio Exterior</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Logística</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">E-commerce</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold" style="">Ventas</span>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail" style="">mail</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
+</a>
+<a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity" href="#" style="">
+<span class="material-symbols-outlined text-[20px]" data-icon="link" style="">link</span>
+<span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 mt-24">
+<div class="max-w-7xl mx-auto bg-primary rounded-xl p-12 text-center text-on-primary relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full translate-x-1/3 translate-y-1/3"></div>
+</div>
+<h2 class="text-4xl md:text-5xl font-black mb-6 relative z-10" style="">¿Quieres ser Mentor o Aliado?</h2>
+<p class="text-lg mb-10 max-w-2xl mx-auto opacity-90 relative z-10" style="">Únete a la red más grande de apoyo ciudadano en Zapopan y comparte tu experiencia con las nuevas generaciones.</p>
+<div class="flex flex-wrap justify-center gap-4 relative z-10">
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-transform shadow-xl" style="">Postularme ahora</button>
+<button class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-colors" style="">Más información</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f6f7] dark:bg-neutral-800 rounded-t-[3rem] mt-12 flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-10 w-auto"></div>
+<p class="text-neutral-500 text-sm font-['Plus_Jakarta_Sans'] uppercase tracking-widest" style="">© 2026 RZ Hub - Ciudad de las Niñas y los Niños</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-neutral-500 text-sm uppercase tracking-widest hover:text-[#984200] transition-all opacity-80 hover:opacity-100" href="#" style="">Aviso de Privacidad</a>
+<a class="text-neutral-500 text-sm uppercase tracking-widest hover:text-[#984200] transition-all opacity-80 hover:opacity-100" href="#" style="">Términos y Condiciones</a>
+<a class="text-neutral-500 text-sm uppercase tracking-widest hover:text-[#984200] transition-all opacity-80 hover:opacity-100" href="#" style="">Mapa de Sitio</a>
+<a class="text-neutral-500 text-sm uppercase tracking-widest hover:text-[#984200] transition-all opacity-80 hover:opacity-100" href="#" style="">Contacto</a>
+</div>
+</footer>
+</body></html>
+
+

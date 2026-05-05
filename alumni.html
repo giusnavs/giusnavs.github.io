@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+                        "colors": {
+                    "primary": "#E61876",
+                    "primary-dim": "#a91054",
+                    "primary-container": "#f9c1d9",
+                    "primary-fixed": "#f48ab6",
+                    "primary-fixed-dim": "#ef5393",
+                    "inverse-primary": "#eb2f7f",
+                    "surface-tint": "#E61876",
+                    "on-primary": "#fde4ef",
+                    "on-primary-container": "#870d43",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-fixed-variant": "#870d43",
+                    "secondary": "#1e40af",
+                    "secondary-dim": "#1E3A8A",
+                    "secondary-container": "#dbeafe",
+                    "secondary-fixed": "#dbeafe",
+                    "secondary-fixed-dim": "#93c5fd",
+                    "on-secondary": "#eff6ff",
+                    "on-secondary-container": "#1E3A8A",
+                    "on-secondary-fixed": "#1E3A8A",
+                    "on-secondary-fixed-variant": "#1e40af",
+                    "tertiary": "#1e40af",
+                    "tertiary-dim": "#1E3A8A",
+                    "tertiary-container": "#dbeafe",
+                    "tertiary-fixed": "#dbeafe",
+                    "tertiary-fixed-dim": "#93c5fd",
+                    "on-tertiary": "#eff6ff",
+                    "on-tertiary-container": "#1E3A8A",
+                    "on-tertiary-fixed": "#1E3A8A",
+                    "on-tertiary-fixed-variant": "#1e40af",
+                    "warning": "#F59E0B",
+                    "warning-dim": "#d97706",
+                    "warning-container": "#fef3c7",
+                    "on-warning": "#ffffff",
+                    "on-warning-container": "#92400e",
+                    "success": "#16A34A",
+                    "success-dim": "#15803d",
+                    "success-container": "#dcfce7",
+                    "on-success": "#ffffff",
+                    "on-success-container": "#166534",
+                    "error": "#DC2626",
+                    "error-dim": "#b91c1c",
+                    "error-container": "#fecaca",
+                    "on-error": "#fef2f2",
+                    "on-error-container": "#991b1b",
+                    "background": "#F8FAFC",
+                    "surface": "#F8FAFC",
+                    "surface-bright": "#F8FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f1f5f9",
+                    "surface-container": "#e5e7eb",
+                    "surface-container-high": "#d1d5db",
+                    "surface-container-highest": "#cbd5e1",
+                    "surface-variant": "#e2e8f0",
+                    "on-surface": "#1F2937",
+                    "on-background": "#1F2937",
+                    "on-surface-variant": "#6b7280",
+                    "outline": "#9ca3af",
+                    "outline-variant": "#d1d5db",
+                    "inverse-surface": "#111827",
+                    "inverse-on-surface": "#d1d5db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    @font-face {
+        font-family: 'Lufga';
+        src: url('./fonts/Lufga-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_4px_20px_rgba(230,24,118,0.08)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+  <a href="index.html" class="flex items-center"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-12 w-auto"></a>
+  <div class="hidden md:flex items-center gap-8 font-semibold">
+    <a href="alumni.html" class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Alumni</a>
+    <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
+    <a href="perks.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Perks y Alianzas</a>
+    <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
+    <a href="calendario.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Calendario</a>
+  </div>
+  <button class="bg-[#E61876] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform">Registrarme</button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative px-8 py-16 md:py-24 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-gradient-to-br from-primary via-primary-dim to-secondary opacity-10"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none text-primary" style="">
+                            Directorio de <span class="text-secondary" style="">Alumni</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-medium max-w-2xl" style="">
+                            Conecta con la red de emprendedores que están transformando Zapopan. Una comunidad vibrante de graduados de Reto Zapopan, listos para colaborar y crecer.
+                        </p>
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-tertiary-container text-on-tertiary-container rounded-full text-sm font-bold tracking-wide" style="">COMUNIDAD ACTIVA</span>
+<span class="px-4 py-2 bg-primary-container text-on-primary-container rounded-full text-sm font-bold tracking-wide" style="">1,200+ GRADUADOS</span>
+</div>
+</div>
+<div class="hidden md:block w-1/3 aspect-square bg-white rounded-xl shadow-xl rotate-3 relative overflow-hidden group">
+<img alt="Entrepreneurs collaborating" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dynamic group of diverse young entrepreneurs collaborating in a brightly lit modern coworking space with colorful murals in Zapopan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-S2lf8rdVwJf2Hv6gBf42i9jLv3vTOn1BKEPX8g4JWCZMJ7bal0ne9NO8YzAHH4R_nMSb_HdhkpA9L3wBM1vjCR-OC3fHXneYFjkw7GvJu_zE2X03SuERB1I6XhgSRYJwnsfC34huSJs9q1u8QR73MZHr99O0IdaaYFroo2B9km6r7KXppwtWOnlsZQ0-bnNHqVPSbnowie86bEVLii9n1jc4QGm3fNyRCRpQoWObYdjV6mI5P1i2V8At2VCFwyxYloMfxuhk2w_" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Generación Actual Section -->
+<section class="px-8 -mt-8 relative z-20 mb-16">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border-l-8 border-secondary mb-8">
+    <h2 class="text-2xl font-extrabold text-on-surface mb-2" style="">Cursando el Reto Zapopan</h2>
+    <p class="text-on-surface-variant font-medium">Conoce a los emprendedores de la generación actual que están desarrollando sus proyectos.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Current Participant Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(230,24,118,0.12)]">
+<div class="relative h-48">
+<img alt="Actual 1" class="w-full h-full object-cover" data-alt="Portrait of a young tech innovator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFwI9_tK6ZkLrrEncEeKFgGVayJyYpP1U2RqajNRazDVXC0r0mGjpL-AYM1R-Du70ZVK86hgdD5LS6y4K6GysrJDOYQfKLd1wO1rCds8JanIYqiEpDr1dODSOLaU3T-drojUAfWJvqDiSKwwPgM5CaYhTEziTU9Ho0gLIDBCt-IM4LW1nA_Z8_ODwtxK3OWCRGPTiE6JIheM1VrrSh-OXwTTCewWqpjaKu5-0Px38egaQ6Z5GGoawHZgGy0gzXfJaVbf872dUFBIRi" style="">
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            EN CURSO
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-secondary tracking-widest uppercase bg-secondary-container/20 px-2 py-1 rounded-md" style="">Generación 2026</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Sofía Martínez</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">BioTech Solutions</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">science</span> Biotecnología
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Incubación</span>
+</div>
+</div>
+</div>
+<!-- Current Participant Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(230,24,118,0.12)]">
+<div class="relative h-48">
+<img alt="Actual 2" class="w-full h-full object-cover" data-alt="Portrait of young entrepreneur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJREGXt53YzoD0Fv1G9mbgqqKMUdhWHdta69VmcyCwNNH7NdBs_AzpYRgdXOZ9TiCM4WAUi01gJpHFyHv064dElOBP7trwmJdReo-r4SOnlyM1_K9iGd_5pZu4qimXk9kW9-sgIT5OOhng8ogjrbLYP__ap5htd18mjPdo4UumPw7uoQJhjVD5yb16iT2VAzQms48QbbjbH1-x44ffx3mTkorWYwJ6675S_8AXVqckQAmzTbYZq8VL4RPrt0PnNEHB2ypzTz9YS8Fk" style="">
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            EN CURSO
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-secondary tracking-widest uppercase bg-secondary-container/20 px-2 py-1 rounded-md" style="">Generación 2026</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Carlos Ruiz</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">EduVerse</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">school</span> EdTech
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Aceleración</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Search and Filters (Alumni Pasados) -->
+<section class="px-8 relative z-20">
+<div class="max-w-7xl mx-auto mb-6">
+    <h2 class="text-3xl font-extrabold text-on-surface" style="">Directorio de Alumni Pasados</h2>
+    <p class="text-on-surface-variant font-medium mt-2">Explora nuestras generaciones anteriores y utiliza los filtros para encontrar perfiles específicos.</p>
+</div>
+<div class="max-w-7xl mx-auto bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Search Bar -->
+<div class="md:col-span-1">
+<label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest" style="">Nombre o Empresa</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary" style="">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary" placeholder="Ej. Juan Pérez..." type="text">
+</div>
+</div>
+<!-- Programa Dropdown -->
+<div>
+<label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest" style="">Programa</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>Reto Zapopan (Todos)</option>
+<option>Reto Zapopan 2023</option>
+<option>Reto Zapopan 2022</option>
+<option>Reto Zapopan 2021</option>
+</select>
+</div>
+<!-- Industria Dropdown -->
+<div>
+<label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest" style="">Industria o Sector</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>Todos los sectores</option>
+<option>Tecnología</option>
+<option>Agrotech</option>
+<option>Salud</option>
+<option>Educación</option>
+</select>
+</div>
+<!-- Tipo Dropdown -->
+<div>
+<label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest" style="">Tipo de Programa</label>
+<select class="w-full px-4 py-3 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>Todos</option>
+<option>Aceleración</option>
+<option>Incubación</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Directory Grid -->
+<section class="px-8 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 1" class="w-full h-full object-cover" data-alt="Professional portrait of a confident woman smiling in a modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKakzu26d2fBBy1GT__5H_Ik3_6vn2RvBVb3PHPunqdnQfIsHBPnTI3kDXHRuUJlL9sbpejAapqz4IiW42gJ7rc24jN7rG5wsYwuTNMvsRWVOEhpzfJ8uPXoyVetuUPBK1iSpd75mfYWnQ0oSAaY-GdEl7SrKFvxrjPxVa35zMBdlDwOKKXW4da8ppg9aYEPc8Eer6Ni7CcTOECMZ8sJnJu0RyrqE7c5HCD8JRpprFQlCwC0G2OIRnOTGAHCj6uSixrSDt06KTGG0H" style="">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            GANADOR
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2023</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Valeria Mendoza</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">EcoLoop México</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">factory</span> Sustentabilidad &amp; Reciclaje
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Aceleración</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 2" class="w-full h-full object-cover" data-alt="Portrait of a young male entrepreneur with glasses looking thoughtfully at the camera in a tech-focused workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpnQMU_25qwUKYyMLyrMbXd-ZEFNVY-hb--JXgzZQiuePuXp4Ml7YK5l_g_1ZMUKPXKok8RykfOaouFciX8Ucj2vfiDLEXwqAX9bIophNFrvOjAfSBFCwluBMDgkMhxzzEPo4Y8zIeHKkQ1esehn92IVyC_JmB_iKy2xdl4yJ6j5TZ1Izzfu7QTCTj3Iim2SbaOLfp8O5wpU-BVWDM7YCzD08p8c5CRiUASdwubgHpG634WDzHaa0nGKJLfq6nqM3TM4ZARCWlYfyI" style="">
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            FINALISTA
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2022</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Ricardo Salinas</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">SmartFarm Tech</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">agriculture</span> Agrotecnología
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Incubación</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 3" class="w-full h-full object-cover" data-alt="Close-up portrait of a woman with a warm smile in an architectural studio with blue design prints in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpbmC8P-sL1JlNVdSLpfeeIB8uBU3uEG-4EDGzSKjCRGeRzALYa5eQc4Ac5StisC-LKcDGOP82fy5xB_gctB6gPqShB4pAe6rq9w__dt_SbHXcPzmRic-mKcqHys1_8715tOsNEexPYt8ivJpUnK-JWsgbZhczckNQc2BvKJsG_YnbbtzTRL2C6wVVHOvdxwcUwYaQh4QUKdjikSwu4rnupI4xwUYrGU8vvTd7Ylak6Rl9MN-7YAi5tNrkizktDiSywmpHEHR5ekh5" style="">
+<div class="absolute top-4 right-4 bg-surface-container-highest text-on-surface-variant text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            PARTICIPANTE
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2023</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Elena Ortiz</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">UrbanLink</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">apartment</span> Desarrollo Urbano
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Aceleración</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 4" class="w-full h-full object-cover" data-alt="Modern professional portrait of a man in a stylish studio setting with vibrant colored lights in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Xp0OjQ6Y-7XkFz7qAvaH9RaoqUggVJSOkR5M4MSZrIpn7oecx856-8H-p9qNzq33pzZFqEJDYBfOS3dLU8xLj5LPymYWr0TbTA9utOm1PyNo0kbg3O4KlMoZk3xL93OcndYe_U0CZ-XYkzZhoZoTGEo3GD3ITxyhuDXNpJqAyZ3JiUl-FuGSrJ8O6Cw_2gf2K-O6hWTzWOsp0gA2ZUMCSSoa18LHTEl-IXdtiQPXw6_xXgK5tslA5OuXq3qtOXt0cNkHojMD4Rn6" style="">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            GANADOR
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2021</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Diego Sánchez</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">Aura Fintech</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">payments</span> Finanzas Digitales
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Escalamiento</span>
+</div>
+</div>
+</div>
+<!-- Repeat for diversity - Card 5 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 5" class="w-full h-full object-cover" data-alt="Portrait of a woman smiling outdoors in a sunlit park area in Zapopan, wearing casual business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOZF6Kw3azjEMNNPrR-AIv3cR1kQl1sGSvyGV8dtZSaodwS6JUVPoUNW7lhdHGBznNZ5F3SpFQOqWcRY_PDtlesi1ilLt9V1cpQ9AiFkBzN1Z5OTxe0HwZza9lY6gnkZPehwFBM8QPlKBSfx4ZjdQU0SNc7pWSADoxi9E_I4qFZmYTzQa2qRqcWBexeVvyAaExmQovPyARNyWqhwkEEyFvLlOPXcX0lVbhfRN-8697opt96IqeE591rC_6_GBKKQ3BbL0UxSpkUp_5" style="">
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            FINALISTA
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2022</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Lucía Robles</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">EduKids Global</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">school</span> Educación
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Incubación</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:translate-y-[-8px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(182,0,81,0.12)]">
+<div class="relative h-48">
+<img alt="Alumnus 6" class="w-full h-full object-cover" data-alt="Close up of a creative professional male in a vibrant studio with artistic equipment and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_C3zqE8ciEzfS4B0cNy7g-O78g5YEgst9YrIY635k0LSosYdXnNh3pPYVtaGG7dK6EA5Ndg-HXlbB6BStOHY1opz0ODNSFLN3RECE1m2H8cFzBU0K1utgbq-_mbQ6F61PsuEdgIGLQ_3tO8tUB7lMsHfnwvo6rWICsv7w-nE35E0yNYZ9_2fevWTS9PHbKaxZTTMKpgvUngJJMmFBZ1OWs_DWqzx2F_qqY4v8Xu-pqZGUxAM8_gGDZvR6aOUKt98GXbPCXtTsBjkK" style="">
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-black px-3 py-1 rounded-full shadow-sm" style="">
+                            GANADOR
+                        </div>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<span class="text-[10px] font-extrabold text-primary tracking-widest uppercase bg-primary-container/20 px-2 py-1 rounded-md" style="">Reto Zapopan 2023</span>
+<h3 class="text-xl font-bold text-on-surface mt-2" style="">Jorge Villarreal</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-secondary" style="">CraftZap</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style="">palette</span> Industrias Creativas
+                            </p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[18px]" style="">group</span>
+</a>
+</div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest" style="">Aceleración</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-16 text-center">
+<button class="bg-surface-container-high text-primary px-12 py-4 rounded-full font-extrabold hover:bg-primary hover:text-on-primary transition-all shadow-sm" style="">
+                    Cargar más emprendedores
+                </button>
+</div>
+</section>
+<!-- Stats Bento Section (Extra value-add) -->
+<section class="px-8 py-16 bg-surface-container-low rounded-t-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-primary p-8 rounded-lg flex flex-col justify-between text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-4xl font-extrabold tracking-tighter mb-4" style="">¿Eres un Alumni?</h2>
+<p class="text-xl font-medium opacity-90 max-w-md" style="">Actualiza tu información y conecta con nuevas oportunidades de inversión y mentoría dentro de la red RZ Hub.</p>
+</div>
+<button class="mt-8 bg-white text-primary w-fit px-8 py-3 rounded-full font-bold relative z-10 hover:scale-105 transition-transform" style="">Actualizar Perfil</button>
+<!-- Abstract Background Graphic -->
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-secondary p-8 rounded-lg text-on-secondary flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">rocket_launch</span>
+<h4 class="text-5xl font-black" style="">+850</h4>
+<p class="text-sm font-bold uppercase tracking-widest mt-2" style="">Empresas Consolidadas</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f6f7] dark:bg-neutral-800 rounded-t-[3rem] mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
+<div class="mb-8 md:mb-0 space-y-4">
+<div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-10 w-auto"></div>
+<p class="text-neutral-500 max-w-xs text-sm" style="">Impulsando el talento y la innovación en la Ciudad de las Niñas y los Niños.</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-8">
+<a class="text-neutral-500 font-medium text-sm uppercase tracking-widest hover:text-[#E61876] transition-all" href="#" style="">Aviso de Privacidad</a>
+<a class="text-neutral-500 font-medium text-sm uppercase tracking-widest hover:text-[#E61876] transition-all" href="#" style="">Términos y Condiciones</a>
+<a class="text-neutral-500 font-medium text-sm uppercase tracking-widest hover:text-[#E61876] transition-all" href="#" style="">Contacto</a>
+</div>
+<div class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-neutral-500" style="">
+                    © 2026 RZ Hub - Ciudad de las Niñas y los Niños
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
+
+

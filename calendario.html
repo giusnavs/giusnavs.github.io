@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>RZ Hub - Calendario de Eventos</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#E61876",
+            "primary-dim": "#a91054",
+            "primary-container": "#f9c1d9",
+            "primary-fixed": "#f48ab6",
+            "primary-fixed-dim": "#ef5393",
+            "inverse-primary": "#eb2f7f",
+            "surface-tint": "#E61876",
+            "on-primary": "#fde4ef",
+            "on-primary-container": "#870d43",
+            "on-primary-fixed": "#000000",
+            "on-primary-fixed-variant": "#870d43",
+            "secondary": "#1e40af",
+            "secondary-dim": "#1E3A8A",
+            "secondary-container": "#dbeafe",
+            "secondary-fixed": "#dbeafe",
+            "secondary-fixed-dim": "#93c5fd",
+            "on-secondary": "#eff6ff",
+            "on-secondary-container": "#1E3A8A",
+            "on-secondary-fixed": "#1E3A8A",
+            "on-secondary-fixed-variant": "#1e40af",
+            "tertiary": "#1e40af",
+            "tertiary-dim": "#1E3A8A",
+            "tertiary-container": "#dbeafe",
+            "tertiary-fixed": "#dbeafe",
+            "tertiary-fixed-dim": "#93c5fd",
+            "on-tertiary": "#eff6ff",
+            "on-tertiary-container": "#1E3A8A",
+            "on-tertiary-fixed": "#1E3A8A",
+            "on-tertiary-fixed-variant": "#1e40af",
+            "warning": "#F59E0B",
+            "warning-dim": "#d97706",
+            "warning-container": "#fef3c7",
+            "on-warning": "#ffffff",
+            "on-warning-container": "#92400e",
+            "success": "#16A34A",
+            "success-dim": "#15803d",
+            "success-container": "#dcfce7",
+            "on-success": "#ffffff",
+            "on-success-container": "#166534",
+            "error": "#DC2626",
+            "error-dim": "#b91c1c",
+            "error-container": "#fecaca",
+            "on-error": "#fef2f2",
+            "on-error-container": "#991b1b",
+            "background": "#F8FAFC",
+            "surface": "#F8FAFC",
+            "surface-bright": "#F8FAFC",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f1f5f9",
+            "surface-container": "#e5e7eb",
+            "surface-container-high": "#d1d5db",
+            "surface-container-highest": "#cbd5e1",
+            "surface-variant": "#e2e8f0",
+            "on-surface": "#1F2937",
+            "on-background": "#1F2937",
+            "on-surface-variant": "#6b7280",
+            "outline": "#9ca3af",
+            "outline-variant": "#d1d5db",
+            "inverse-surface": "#111827",
+            "inverse-on-surface": "#d1d5db"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Lufga';
+      src: url('./fonts/Lufga-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased">
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_4px_20px_rgba(230,24,118,0.08)]">
+    <div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+      <a href="index.html" class="flex items-center"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo"
+          class="h-12 w-auto"></a>
+      <div class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
+        <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
+        <a href="perks.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Perks y Alianzas</a>
+        <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
+        <a href="calendario.html"
+          class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Calendario</a>
+      </div>
+      <button
+        class="bg-[#E61876] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform">Registrarme</button>
+    </div>
+  </nav>
+  <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <!-- Hero Section -->
+    <section class="mb-16">
+      <div
+        class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-dim p-12 md:p-20 text-on-primary">
+        <div class="relative z-10 max-w-3xl">
+          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1]">
+            Próximos Eventos
+          </h1>
+          <p class="text-xl md:text-2xl font-medium opacity-90 leading-relaxed">
+            Descubre y conéctate con las próximas actividades para fortalecer tu startup y generar nuevas oportunidades.
+          </p>
+        </div>
+        <!-- Abstract Design Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/2 w-64 h-64 bg-tertiary/20 rounded-full -ml-32 -mb-20 blur-2xl"></div>
+      </div>
+    </section>
+    <!-- Events List (Timeline Style) -->
+    <section class="space-y-8 relative">
+      <!-- Central Line for Timeline (Desktop) -->
+      <div class="hidden md:block absolute left-[104px] top-0 bottom-0 w-px bg-surface-container-highest"></div>
+      <!-- Event 1: ABR 10 -->
+      <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+        <!-- Date Marker -->
+        <div class="flex-shrink-0 w-52 pt-2 text-right hidden md:block">
+          <span class="text-4xl font-black text-on-surface-variant block">ABR 10</span>
+          <span class="text-secondary font-bold uppercase tracking-widest text-sm">Próximamente</span>
+        </div>
+        <!-- Mobile Date Marker -->
+        <div class="md:hidden flex items-center gap-4 mb-2">
+          <span class="text-2xl font-black text-primary">ABR 10</span>
+          <span class="h-px flex-grow bg-surface-container-highest"></span>
+        </div>
+        <!-- Card Content -->
+        <div
+          class="flex-grow bg-surface-container-lowest p-8 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-low transition-all duration-300 hover:shadow-[0_20px_40px_rgba(182,0,81,0.05)] hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span
+                  class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Reto</span>
+                <span class="flex items-center gap-1 text-on-surface-variant text-sm font-medium">
+                  <span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                  23:59h GMT-6
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-on-surface mb-2">Cierre convocatoria · Movilidad urbana
+              </h3>
+              <p class="text-on-surface-variant text-lg">Fecha límite para envío de propuestas.</p>
+            </div>
+            <button
+              class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+              Registrarse <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Event 2: ABR 24 -->
+      <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+        <div class="flex-shrink-0 w-52 pt-2 text-right hidden md:block">
+          <span class="text-4xl font-black text-on-surface-variant block">ABR 24</span>
+          <span class="text-[#2563eb] font-bold uppercase tracking-widest text-sm">Cupo Limitado</span>
+        </div>
+        <div class="md:hidden flex items-center gap-4 mb-2">
+          <span class="text-2xl font-black text-[#2563eb]">ABR 24</span>
+          <span class="h-px flex-grow bg-surface-container-highest"></span>
+        </div>
+        <div
+          class="flex-grow bg-surface-container-lowest p-8 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-low transition-all duration-300 hover:shadow-[0_20px_40px_rgba(38,198,218,0.1)] hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span
+                  class="bg-[#2563eb]/10 text-[#00838F] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Taller</span>
+                <span class="flex items-center gap-1 text-on-surface-variant text-sm font-medium">
+                  <span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                  Hub Zapopan Centro
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-on-surface mb-2">Taller Design Thinking</h3>
+              <p class="text-on-surface-variant text-lg">Con Claudia Torres · Presencial · 20 lugares.</p>
+            </div>
+            <button
+              class="bg-[#2563eb] text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+              Registrarse <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Event 3: MAY 22 -->
+      <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+        <div class="flex-shrink-0 w-52 pt-2 text-right hidden md:block">
+          <span class="text-4xl font-black text-on-surface-variant block">MAY 22</span>
+          <span class="text-[#7C4DFF] font-bold uppercase tracking-widest text-sm">Comunidad</span>
+        </div>
+        <div class="md:hidden flex items-center gap-4 mb-2">
+          <span class="text-2xl font-black text-[#7C4DFF]">MAY 22</span>
+          <span class="h-px flex-grow bg-surface-container-highest"></span>
+        </div>
+        <div
+          class="flex-grow bg-surface-container-lowest p-8 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-surface-container-low transition-all duration-300 hover:shadow-[0_20px_40px_rgba(124,77,255,0.1)] hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span
+                  class="bg-[#7C4DFF]/10 text-[#4527A0] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Networking</span>
+                <span class="flex items-center gap-1 text-on-surface-variant text-sm font-medium">
+                  <span class="material-symbols-outlined text-sm" data-icon="groups">groups</span>
+                  Alumni Only
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-on-surface mb-2">Networking alumni Gen 2026×2025</h3>
+              <p class="text-on-surface-variant text-lg">Patio Providencia · Encuentro entre generaciones.</p>
+            </div>
+            <button
+              class="bg-[#7C4DFF] text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+              Registrarse <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Closure Message -->
+    <section class="mt-24 text-center">
+      <div class="inline-block p-1 bg-gradient-to-r from-primary via-secondary to-tertiary rounded-full">
+        <div class="bg-surface px-10 py-4 rounded-full">
+          <p class="text-xl font-bold text-on-surface-variant italic">
+            "Ver que hay eventos próximos fortalece la sensación de que el ecosistema está vivo."
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full rounded-t-xl mt-20 bg-slate-50 dark:bg-slate-950">
+    <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full">
+      <div class="mb-6 md:mb-0">
+        <div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-10 w-auto">
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+        <a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm hover:text-[#984200] transition-colors"
+          href="#">Privacidad</a>
+        <a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm hover:text-[#984200] transition-colors"
+          href="#">Términos</a>
+        <a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm hover:text-[#984200] transition-colors"
+          href="#">Contacto</a>
+        <a class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm hover:text-[#984200] transition-colors"
+          href="#">Gobierno de Zapopan</a>
+      </div>
+      <div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm opacity-80">
+        © 2026 RZ Hub - El Corazón de la Innovación
+      </div>
+    </div>
+  </footer>
+  <!-- Floating Action Button for Support/Help (Optional but good UX) -->
+  <button
+    class="fixed bottom-8 right-8 w-16 h-16 bg-tertiary-container text-on-tertiary-container rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 active:scale-95 z-40">
+    <span class="material-symbols-outlined" data-icon="help_center"
+      style="font-variation-settings: 'FILL' 1;">help_center</span>
+  </button>
+</body>
+
+</html>

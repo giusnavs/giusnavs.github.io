@@ -1,0 +1,274 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+                        "colors": {
+                    "primary": "#E61876",
+                    "primary-dim": "#a91054",
+                    "primary-container": "#f9c1d9",
+                    "primary-fixed": "#f48ab6",
+                    "primary-fixed-dim": "#ef5393",
+                    "inverse-primary": "#eb2f7f",
+                    "surface-tint": "#E61876",
+                    "on-primary": "#fde4ef",
+                    "on-primary-container": "#870d43",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-fixed-variant": "#870d43",
+                    "secondary": "#1e40af",
+                    "secondary-dim": "#1E3A8A",
+                    "secondary-container": "#dbeafe",
+                    "secondary-fixed": "#dbeafe",
+                    "secondary-fixed-dim": "#93c5fd",
+                    "on-secondary": "#eff6ff",
+                    "on-secondary-container": "#1E3A8A",
+                    "on-secondary-fixed": "#1E3A8A",
+                    "on-secondary-fixed-variant": "#1e40af",
+                    "tertiary": "#1e40af",
+                    "tertiary-dim": "#1E3A8A",
+                    "tertiary-container": "#dbeafe",
+                    "tertiary-fixed": "#dbeafe",
+                    "tertiary-fixed-dim": "#93c5fd",
+                    "on-tertiary": "#eff6ff",
+                    "on-tertiary-container": "#1E3A8A",
+                    "on-tertiary-fixed": "#1E3A8A",
+                    "on-tertiary-fixed-variant": "#1e40af",
+                    "warning": "#F59E0B",
+                    "warning-dim": "#d97706",
+                    "warning-container": "#fef3c7",
+                    "on-warning": "#ffffff",
+                    "on-warning-container": "#92400e",
+                    "success": "#16A34A",
+                    "success-dim": "#15803d",
+                    "success-container": "#dcfce7",
+                    "on-success": "#ffffff",
+                    "on-success-container": "#166534",
+                    "error": "#DC2626",
+                    "error-dim": "#b91c1c",
+                    "error-container": "#fecaca",
+                    "on-error": "#fef2f2",
+                    "on-error-container": "#991b1b",
+                    "background": "#F8FAFC",
+                    "surface": "#F8FAFC",
+                    "surface-bright": "#F8FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f1f5f9",
+                    "surface-container": "#e5e7eb",
+                    "surface-container-high": "#d1d5db",
+                    "surface-container-highest": "#cbd5e1",
+                    "surface-variant": "#e2e8f0",
+                    "on-surface": "#1F2937",
+                    "on-background": "#1F2937",
+                    "on-surface-variant": "#6b7280",
+                    "outline": "#9ca3af",
+                    "outline-variant": "#d1d5db",
+                    "inverse-surface": "#111827",
+                    "inverse-on-surface": "#d1d5db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    @font-face {
+        font-family: 'Lufga';
+        src: url('./fonts/Lufga-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_4px_20px_rgba(230,24,118,0.08)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+  <a href="index.html" class="flex items-center"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-12 w-auto"></a>
+  <div class="hidden md:flex items-center gap-8 font-semibold">
+    <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
+    <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
+    <a href="perks.html" class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Perks y Alianzas</a>
+    <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
+    <a href="calendario.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Calendario</a>
+  </div>
+  <button class="bg-[#E61876] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform">Registrarme</button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="relative mb-24 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-dim p-12 md:p-20 text-on-primary">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-secondary rounded-full opacity-20 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-turquoise rounded-full opacity-20 blur-3xl"></div>
+<div class="relative z-10 max-w-3xl">
+<span class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-sm font-extrabold tracking-widest mb-6" style="">ALUMNI HUB</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[0.9]" style="">Beneficios Exclusivos (Perks)</h1>
+<p class="text-xl md:text-2xl font-medium opacity-90 leading-relaxed" style="">
+                    El Hub busca alianzas con empresas que den beneficios concretos a los alumni: descuentos en software, acceso a firmas, consultoras, despachos. Pertenecer tiene un valor tangible.
+                </p>
+</div>
+</section>
+<!-- Dynamic Grid Section -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight" style="">Explora tus Ventajas</h2>
+<p class="text-on-surface-variant mt-2" style="">Acceso directo a herramientas y servicios de élite.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<span class="w-12 h-1 bg-primary rounded-full"></span>
+<span class="w-4 h-1 bg-surface-container-highest rounded-full"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Software (Yellow) - Bento Wide -->
+<div class="md:col-span-7 bg-tertiary-container rounded-xl p-8 flex flex-col justify-between group hover:scale-[1.01] transition-transform duration-500">
+<div class="flex justify-between items-start">
+<div class="bg-white/40 p-4 rounded-3xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="terminal" style="">terminal</span>
+</div>
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden">
+<img class="w-8 h-8 object-contain" data-alt="minimalist black and white notion software logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0MK5mQQIBqT_5SLEtm9cP1wEowxNFWQB8OWjD00x5m6bXVf8ZL2h2AhjN98P6Ua_KkJeJKikgEbq7YMIy3CHMRvR80Ch_Qa7CrE9CW85ZWdp796W-0IgjzNts0-zWu8Ly2_i-LipN09J-duM9NjNKm9kSoUXCVO6Wn71JqC8G5lHGNLDPIAdg7w7OaT7AlT3RYW92VsTS_bFdnpDblnkTymAjzVUefHA1Jm2PvLVTExBbOPdAEsoq9-kIqsOCDhs0OA1jR7hpP2OA" style="">
+</div>
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden">
+<img class="w-8 h-8 object-contain" data-alt="vibrant colorful figma design tool logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ylDon4awSKXnd6I_GgL8Q2Iy88qeaJQeljpIU8hajuh3MEUyzn2GuYZbD1MsEZdFDgdIRjarbq5JL5UbDmIL78P0Kpc2sbx1_lLV7-UINl4_smEY4z5H_aWzMnVJZAnuJzaVnipcbABcxI-gU6XKSClN5jaXcwl2LnmWMHrzCNgcWv6LSvlyFlAEB05oIOuRGsZ2UUe_S9paj8nr0PfMHff8-i32mKReFAJ96rrCpPp0JREG74eRAJkE58UuITpaNbQ1_R7lKnW6" style="">
+</div>
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden">
+<img class="w-8 h-8 object-contain" data-alt="bright yellow miro whiteboard software logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjP8FXSJznkD0JenJBu6tpUT-HOJlHIfLmvACpdV4bgSG1eF1vu3hukKAYb988fcnLB7TVwWIj8OgY_E28qhp00OG6mGd6kScyQV4uoffE8Ito_F2b1l7OKHIRJJIWU6LwdKCH1iBbi3GFWtfwDIA08wOo4N6CJymhptZlCOBbKwd0IleJpdp7ll5CU5H0gtR8IrwE7MQPBh6gnucVkniTdXlbTDNKawxJLcWjPffgouEhODHT-3glxX92UQ9tKXj17S_U7CtEh1oG" style="">
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="text-3xl font-black text-on-tertiary-container" style="">Software Premium</h3>
+<p class="text-on-tertiary-container/80 text-lg mt-2 font-medium" style="">Notion, Figma, Miro. Descuento o acceso gratuito para alumni verificados durante 12 meses.</p>
+<div class="flex gap-4 mt-8">
+<button class="bg-on-tertiary-container text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all" style="">Activar beneficio</button>
+<button class="text-on-tertiary-container font-bold px-4 py-3 underline decoration-2 underline-offset-4" style="">Ver detalles</button>
+</div>
+</div>
+</div>
+<!-- Legal y Fiscal (Orange) - Bento Tall -->
+<div class="md:col-span-5 bg-secondary-container rounded-xl p-8 flex flex-col justify-between hover:scale-[1.01] transition-transform duration-500">
+<div>
+<div class="bg-white/40 w-fit p-4 rounded-3xl backdrop-blur-sm mb-8">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container" data-icon="gavel" style="">gavel</span>
+</div>
+<h3 class="text-3xl font-black text-on-secondary-container" style="">Legal y Fiscal</h3>
+<p class="text-on-secondary-container/80 text-lg mt-2 font-medium" style="">Despachos aliados de alto nivel. 1 sesión de asesoría gratuita por mes. El Hub valida la elegibilidad.</p>
+</div>
+<div class="mt-8 flex flex-col gap-3">
+<button class="bg-on-secondary-container text-white w-full py-4 rounded-full font-bold" style="">Activar beneficio</button>
+<button class="text-on-secondary-container font-bold w-full py-2" style="">Ver detalles</button>
+</div>
+</div>
+<!-- Aceleradoras (Turquoise) -->
+<div class="md:col-span-6 bg-[#E0F7FA] rounded-xl p-8 border-l-8 border-turquoise flex flex-col md:flex-row gap-6 items-center">
+<div class="bg-turquoise text-white p-6 rounded-full shrink-0">
+<span class="material-symbols-outlined text-4xl" data-icon="rocket_launch" style="">rocket_launch</span>
+</div>
+<div>
+<h3 class="text-2xl font-black text-[#006064]" style="">Aceleradoras</h3>
+<p class="text-[#006064]/70 font-medium" style="">Jalisco Hub, Wayra. Fast-track en convocatorias. Proceso diferenciado para alumni del Hub.</p>
+<button class="mt-4 text-[#006064] font-extrabold flex items-center gap-2 group" style="">
+                            Solicitar acceso <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Formación (Rosa) -->
+<div class="md:col-span-6 bg-primary-container/20 rounded-xl p-8 border-l-8 border-primary flex flex-col md:flex-row gap-6 items-center">
+<div class="bg-primary text-white p-6 rounded-full shrink-0">
+<span class="material-symbols-outlined text-4xl" data-icon="school" style="">school</span>
+</div>
+<div>
+<h3 class="text-2xl font-black text-on-primary-container" style="">Formación Contínua</h3>
+<p class="text-on-primary-container/70 font-medium" style="">Tec, otras IES. Descuento en diplomados y programas de educación continua para potenciar tu carrera.</p>
+<button class="mt-4 text-primary font-extrabold flex items-center gap-2 group" style="">
+                            Ver convenios <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlighted Model Section -->
+<section class="bg-surface-container-low rounded-xl p-12 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[20rem] -rotate-12" data-icon="handshake" style="">handshake</span>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl font-black text-on-surface mb-6" style="">¿Cómo funciona el Modelo de Alianza?</h2>
+<p class="text-xl leading-relaxed text-on-surface-variant" style=""><br></p>
+<div class="mt-8 p-6 bg-white rounded-3xl shadow-sm inline-block">
+<span class="text-2xl font-extrabold text-primary flex items-center gap-4" style="">
+<span class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="verified" style="">verified</span>
+</span>
+                            El alumni llega, ve, activa.
+                        </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+<div class="text-3xl font-black text-secondary mb-1" style="">24/7</div>
+<div class="text-xs font-bold uppercase tracking-widest opacity-50" style="">Disponibilidad</div>
+</div>
+<div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+<div class="text-3xl font-black text-turquoise mb-1" style="">100%</div>
+<div class="text-xs font-bold uppercase tracking-widest opacity-50" style="">Digital</div>
+</div>
+<div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+<div class="text-3xl font-black text-primary mb-1" style="">+50</div>
+<div class="text-xs font-bold uppercase tracking-widest opacity-50" style="">Socio Aliados</div>
+</div>
+<div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+<div class="text-3xl font-black text-purple mb-1" style="">Fast</div>
+<div class="text-xs font-bold uppercase tracking-widest opacity-50" style="">Activación</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl mt-20 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full">
+<div class="mb-8 md:mb-0">
+<div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-10 w-auto"></div>
+<p class="text-slate-500 text-sm" style="">© 2026 RZ Hub - El Corazón de la Innovación</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 text-sm hover:text-[#984200] transition-colors" href="#" style="">Privacidad</a>
+<a class="text-slate-500 text-sm hover:text-[#984200] transition-colors" href="#" style="">Términos</a>
+<a class="text-slate-500 text-sm hover:text-[#984200] transition-colors" href="#" style="">Contacto</a>
+<a class="text-slate-500 text-sm hover:text-[#984200] transition-colors" href="#" style="">Gobierno de Zapopan</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+
