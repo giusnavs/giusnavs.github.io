@@ -123,6 +123,7 @@
                 <span class="text-xl font-headline font-black tracking-tighter text-on-surface-variant">RZ Hub</span>
             </a>
             <div class="hidden md:flex items-center gap-8 font-semibold">
+                <a href="index.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Inicio</a>
                 <a href="alumni.html"
                     class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Alumni</a>
                 <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
@@ -130,8 +131,11 @@
                 <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
                 <a href="calendario.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Calendario</a>
             </div>
-            <button
-                class="bg-[#E61876] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform">Registrarme</button>
+            <a href="perfil.html" title="Mi Perfil" class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-full pl-3 pr-4 py-2 hover:border-[#E61876] hover:shadow-md transition-all group">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#E61876] to-[#a91054] flex items-center justify-center text-white text-sm font-black shrink-0">A</div>
+                <span class="text-sm font-bold text-slate-700 group-hover:text-[#E61876] transition-colors hidden sm:block">Mi Perfil</span>
+                <span class="material-symbols-outlined text-slate-400 text-[18px]">account_circle</span>
+            </a>
         </div>
     </nav>
     <main class="pt-24 min-h-screen">
@@ -266,7 +270,7 @@
             </div>
             <div
                 class="max-w-7xl mx-auto bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] border-none">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
                     <!-- Search Bar -->
                     <div class="relative">
                         <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Nombre o Empresa</label>
@@ -285,7 +289,7 @@
                             class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Programa</label>
                         <button onclick="toggleDropdown('prog-options')"
                             class="w-full px-4 py-2.5 bg-surface-container-low rounded-full border-none text-on-surface flex items-center justify-between group hover:bg-surface-container transition-all text-sm">
-                            <span id="selected-prog" class="truncate mr-2">Todas las generaciones</span>
+                            <span id="selected-prog" class="truncate mr-2">Todas las gen.</span>
                             <span
                                 class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
                         </button>
@@ -306,10 +310,26 @@
                         </div>
                     </div>
 
+                    <!-- Especialidad Dropdown -->
+                    <div class="relative" id="spec-dropdown">
+                        <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Especialidad</label>
+                        <button onclick="toggleDropdown('spec-options')" 
+                            class="w-full px-4 py-2.5 bg-surface-container-low rounded-full border-none text-on-surface flex items-center justify-between group hover:bg-surface-container transition-all text-sm">
+                            <span id="selected-spec" class="truncate mr-2">Todas las áreas</span>
+                            <span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+                        </button>
+                        <div id="spec-options" class="hidden absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-surface-container-high z-[100] py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                            <div onclick="selectOption('spec', 'Todas las áreas')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-xs">Todas las áreas</div>
+                            <div onclick="selectOption('spec', 'AI')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-xs">AI</div>
+                            <div onclick="selectOption('spec', 'SaaS')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-xs">SaaS</div>
+                            <div onclick="selectOption('spec', 'Healthtech')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-xs">Healthtech</div>
+                            <div onclick="selectOption('spec', 'Fintech')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-xs">Fintech</div>
+                        </div>
+                    </div>
+
                     <!-- Industria Dropdown -->
                     <div class="relative" id="ind-dropdown">
-                        <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Industria o
-                            Sector</label>
+                        <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Industria</label>
                         <button onclick="toggleDropdown('ind-options')"
                             class="w-full px-4 py-2.5 bg-surface-container-low rounded-full border-none text-on-surface flex items-center justify-between group hover:bg-surface-container transition-all text-sm">
                             <span id="selected-ind" class="truncate mr-2">Todos los sectores</span>
@@ -338,8 +358,7 @@
 
                     <!-- Tipo Dropdown -->
                     <div class="relative" id="type-dropdown">
-                        <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Tipo de
-                            Programa</label>
+                        <label class="block text-xs font-bold text-outline mb-2 uppercase tracking-widest">Tipo</label>
                         <button onclick="toggleDropdown('type-options')"
                             class="w-full px-4 py-2.5 bg-surface-container-low rounded-full border-none text-on-surface flex items-center justify-between group hover:bg-surface-container transition-all text-sm">
                             <span id="selected-type" class="truncate mr-2">Todas las etapas</span>
@@ -364,7 +383,7 @@
 
             <script>
                 function toggleDropdown(id) {
-                    const options = ['prog-options', 'ind-options', 'type-options'];
+                    const options = ['prog-options', 'spec-options', 'ind-options', 'type-options'];
                     options.forEach(opt => {
                         if (opt === id) {
                             document.getElementById(opt).classList.toggle('hidden');
@@ -380,8 +399,9 @@
                 }
 
                 window.onclick = function (event) {
-                    if (!event.target.closest('#prog-dropdown') && !event.target.closest('#ind-dropdown') && !event.target.closest('#type-dropdown')) {
+                    if (!event.target.closest('#prog-dropdown') && !event.target.closest('#spec-dropdown') && !event.target.closest('#ind-dropdown') && !event.target.closest('#type-dropdown')) {
                         document.getElementById('prog-options').classList.add('hidden');
+                        document.getElementById('spec-options').classList.add('hidden');
                         document.getElementById('ind-options').classList.add('hidden');
                         document.getElementById('type-options').classList.add('hidden');
                     }
@@ -417,16 +437,10 @@
                             </p>
                         </div>
                         <div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
-                            <div class="flex gap-3">
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">mail</span>
-                                </a>
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">group</span>
-                                </a>
-                            </div>
+                            <button onclick="openAlumniModal('Valeria Mendoza', 'EcoLoop México', 'Sustentabilidad & Reciclaje', 'GANADOR', 'Reto Zapopan 2023', '$450K USD', '12', 'MX · USA · CA', 'México')" 
+                                class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors">
+                                Ver Perfil
+                            </button>
                             <span class="text-[10px] font-bold text-outline uppercase tracking-widest"
                                 style="">Aceleración</span>
                         </div>
@@ -458,16 +472,10 @@
                             </p>
                         </div>
                         <div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
-                            <div class="flex gap-3">
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">mail</span>
-                                </a>
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">group</span>
-                                </a>
-                            </div>
+                            <button onclick="openAlumniModal('Ricardo Salinas', 'SmartFarm Tech', 'Agrotecnología', 'FINALISTA', 'Reto Zapopan 2022', '$280K USD', '8', 'MX · CL', 'México')" 
+                                class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors">
+                                Ver Perfil
+                            </button>
                             <span class="text-[10px] font-bold text-outline uppercase tracking-widest"
                                 style="">Incubación</span>
                         </div>
@@ -499,16 +507,10 @@
                             </p>
                         </div>
                         <div class="pt-4 flex items-center justify-between border-t border-surface-container-high">
-                            <div class="flex gap-3">
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">mail</span>
-                                </a>
-                                <a class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-                                    href="#" style="">
-                                    <span class="material-symbols-outlined text-[18px]" style="">group</span>
-                                </a>
-                            </div>
+                            <button onclick="openAlumniModal('Elena Ortiz', 'UrbanLink', 'Desarrollo Urbano', 'PARTICIPANTE', 'Reto Zapopan 2023', '$120K USD', '5', 'MX', 'México')" 
+                                class="bg-primary text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors">
+                                Ver Perfil
+                            </button>
                             <span class="text-[10px] font-bold text-outline uppercase tracking-widest"
                                 style="">Aceleración</span>
                         </div>
@@ -692,10 +694,133 @@
                     href="#">Gobierno de Zapopan</a>
             </div>
             <div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm opacity-80 text-center md:text-right">
-                © 2026 Gobierno de Zapopan. Ciudad de las Niñas y los Niños.
+                © 2026 Gobierno de Zapopan.
             </div>
         </div>
     </footer>
+    <!-- Alumni Detail Modal -->
+    <div id="alumni-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
+        <div class="bg-white w-full max-w-4xl rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-in zoom-in-95 duration-300 relative">
+            <button onclick="closeAlumniModal()" class="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition-all">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <!-- Panel Izquierdo -->
+            <div class="w-full md:w-[40%] bg-slate-50 p-8 flex flex-col items-center border-r border-slate-100">
+                <div class="relative w-48 h-48 rounded-3xl overflow-hidden shadow-xl mb-6">
+                    <img id="modal-img" src="img/perfil_generico_card.svg" class="w-full h-full object-cover">
+                    <div id="modal-badge" class="absolute top-4 right-4 bg-tertiary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-md">GANADOR</div>
+                </div>
+                <h2 id="modal-name" class="text-2xl font-black text-slate-800 text-center mb-1">Valeria Mendoza</h2>
+                <p id="modal-startup" class="text-primary font-bold mb-4">EcoLoop México</p>
+                
+                <div class="flex gap-4 mb-8">
+                    <button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-400 hover:text-primary transition-all border border-slate-100">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </button>
+                    <button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-400 hover:text-primary transition-all border border-slate-100">
+                        <span class="material-symbols-outlined text-xl">mail</span>
+                    </button>
+                </div>
+                
+                <div class="w-full space-y-3">
+                    <div class="flex items-center gap-3 text-slate-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                        <span id="modal-gen">Reto Zapopan 2023</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">category</span>
+                        <span id="modal-industry">Sustentabilidad</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-500 text-sm">
+                        <span class="material-symbols-outlined text-primary">public</span>
+                        <span id="modal-country">México</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel Derecho -->
+            <div class="flex-1 p-8 md:p-12">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Sobre el Founder</h4>
+                        <p class="text-slate-600 leading-relaxed italic">"Nuestra misión es transformar la gestión de residuos en México a través de tecnología de economía circular."</p>
+                    </div>
+                    <button onclick="openChat()" class="bg-[#E61876] text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:scale-105 transition-all shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-lg">chat</span>
+                        Conectar por Chat
+                    </button>
+                </div>
+                
+                <hr class="border-slate-100 mb-8">
+                
+                <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">Métricas de Impacto</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <span class="material-symbols-outlined text-primary mb-2">payments</span>
+                        <div id="modal-funding" class="text-xl font-black text-slate-800">$450K USD</div>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase">Funding Levantado</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <span class="material-symbols-outlined text-blue-500 mb-2">groups</span>
+                        <div id="modal-jobs" class="text-xl font-black text-slate-800">12</div>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase">Empleos Generados</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <span class="material-symbols-outlined text-teal-500 mb-2">public</span>
+                        <div id="modal-markets" class="text-xl font-black text-slate-800">MX · USA</div>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase">Mercados Activos</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <span class="material-symbols-outlined text-purple-500 mb-2">military_tech</span>
+                        <div id="modal-stage" class="text-xl font-black text-slate-800">2023</div>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase">Año Generación</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openAlumniModal(name, startup, industry, badge, gen, funding, jobs, markets, country) {
+            document.getElementById('modal-name').innerText = name;
+            document.getElementById('modal-startup').innerText = startup;
+            document.getElementById('modal-industry').innerText = industry;
+            document.getElementById('modal-badge').innerText = badge;
+            document.getElementById('modal-gen').innerText = gen;
+            document.getElementById('modal-funding').innerText = funding;
+            document.getElementById('modal-jobs').innerText = jobs;
+            document.getElementById('modal-markets').innerText = markets;
+            document.getElementById('modal-country').innerText = country;
+            
+            const modal = document.getElementById('alumni-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAlumniModal() {
+            const modal = document.getElementById('alumni-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openChat() {
+            alert('Abriendo sistema de mensajería interno para conectar con el founder...');
+        }
+
+        // Close on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('alumni-modal');
+            if (event.target == modal) {
+                closeAlumniModal();
+            }
+        }
+        
+        // Close on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAlumniModal();
+        });
+    </script>
 </body>
 
 </html>

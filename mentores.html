@@ -125,6 +125,7 @@
                 <span class="text-xl font-headline font-black tracking-tighter text-on-surface-variant">RZ Hub</span>
             </a>
             <div class="hidden md:flex items-center gap-8 font-semibold">
+                <a href="index.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Inicio</a>
                 <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
                 <a href="mentores.html"
                     class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Mentores</a>
@@ -150,7 +151,7 @@
                         Mentores y <span class="text-primary italic" style="">Aliados</span>
                     </h1>
                     <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed" style="">Expertos y
-                        organizaciones aliadas que acompanan a los emprendedores de Reto Zapopan en cada etapa.</p>
+                        organizaciones aliadas que acompañan a los emprendedores de Reto Zapopan en cada etapa.</p>
                 </div>
                 <div class="flex-1 relative">
                     <div
@@ -177,6 +178,107 @@
                 </div>
             </div>
         </header>
+
+        <!-- Roles Explanation Section (Flip Cards) -->
+        <section class="max-w-7xl mx-auto px-8 mb-24">
+            <style>
+                .flip-card {
+                    perspective: 1000px;
+                    height: 280px;
+                }
+                .flip-card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    transform-style: preserve-3d;
+                    cursor: pointer;
+                }
+                .flip-card.is-flipped .flip-card-inner {
+                    transform: rotateY(180deg);
+                }
+                .flip-card-front, .flip-card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    border-radius: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2rem;
+                }
+                .flip-card-back {
+                    transform: rotateY(180deg);
+                }
+            </style>
+            <h2 class="text-3xl md:text-4xl font-black text-center text-slate-800 mb-12">¿Qué significa cada rol?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mentor Card -->
+                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-xl border-t-8 border-tertiary border-b border-x border-slate-100">
+                            <div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-4">
+                                <span class="material-symbols-outlined text-4xl">school</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-800 mb-2">Mentor</h3>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Guía Estratégica 1-a-1</p>
+                            <div class="mt-6 text-primary text-xs font-bold flex items-center gap-1">
+                                Clic para saber más <span class="material-symbols-outlined text-sm">touch_app</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-tertiary text-white shadow-2xl p-8">
+                            <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Acompañamiento 1-a-1</h3>
+                            <p class="text-sm leading-relaxed opacity-90">Expertos que ofrecen mentoría personalizada para validar tu modelo de negocio, levantar capital y escalar tu visión estratégica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tallerista Card -->
+                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-xl border-t-8 border-secondary border-b border-x border-slate-100">
+                            <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-4">
+                                <span class="material-symbols-outlined text-4xl">architecture</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-800 mb-2">Tallerista</h3>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Aprendizaje Práctico</p>
+                            <div class="mt-6 text-primary text-xs font-bold flex items-center gap-1">
+                                Clic para saber más <span class="material-symbols-outlined text-sm">touch_app</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-secondary text-white shadow-2xl p-8">
+                            <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Workshops Técnicos</h3>
+                            <p class="text-sm leading-relaxed opacity-90">Especialistas que imparten sesiones grupales intensivas sobre herramientas específicas, metodologías ágiles y desarrollo técnico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aliado Card -->
+                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-white shadow-xl border-t-8 border-blue-500 border-b border-x border-slate-100">
+                            <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-4">
+                                <span class="material-symbols-outlined text-4xl">handshake</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-800 mb-2">Aliado</h3>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Conexión y Mercado</p>
+                            <div class="mt-6 text-primary text-xs font-bold flex items-center gap-1">
+                                Clic para saber más <span class="material-symbols-outlined text-sm">touch_app</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back bg-blue-600 text-white shadow-2xl p-8">
+                            <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Red Estratégica</h3>
+                            <p class="text-sm leading-relaxed opacity-90">Corporativos e instituciones que abren puertas comerciales, facilitan el networking y ofrecen beneficios exclusivos para tu startup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Filters & Search Shell -->
         <section class="px-8 mb-12">
             <div
@@ -199,20 +301,34 @@
                 <div class="flex flex-col md:flex-row items-center gap-4 w-full lg:flex-1">
                     <!-- Custom Specialty Dropdown -->
                     <div class="relative w-full md:w-64" id="specialty-dropdown">
-                        <button onclick="document.getElementById('specialty-options').classList.toggle('hidden')" 
+                        <button onclick="document.getElementById('specialty-options').classList.toggle('hidden')"
                             class="w-full bg-surface-container-lowest border-none rounded-full px-6 py-3 text-on-surface flex items-center justify-between shadow-sm hover:shadow-md transition-all group">
-                            <span id="selected-specialty">Área de Especialidad</span>
-                            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+                            <span id="selected-specialty">Especialidad</span>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
                         </button>
-                        
+
                         <!-- Options List -->
-                        <div id="specialty-options" class="hidden absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-surface-container-high z-[100] py-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                            <div onclick="selectSpecialty('Área de Especialidad')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Todas las áreas</div>
-                            <div onclick="selectSpecialty('Tecnología')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Tecnología</div>
-                            <div onclick="selectSpecialty('Finanzas')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Finanzas</div>
-                            <div onclick="selectSpecialty('Impacto Social')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Impacto Social</div>
-                            <div onclick="selectSpecialty('Diseño y UI')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Diseño y UI</div>
-                            <div onclick="selectSpecialty('Marketing')" class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">Marketing</div>
+                        <div id="specialty-options"
+                            class="hidden absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-surface-container-high z-[100] py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                            <div onclick="selectSpecialty('Todas las áreas')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                Todas las áreas</div>
+                            <div onclick="selectSpecialty('AI')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                AI</div>
+                            <div onclick="selectSpecialty('SaaS')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                SaaS</div>
+                            <div onclick="selectSpecialty('Healthtech')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                Healthtech</div>
+                            <div onclick="selectSpecialty('Fintech')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                Fintech</div>
+                            <div onclick="selectSpecialty('Agtech')"
+                                class="px-6 py-2 hover:bg-primary/5 hover:text-primary cursor-pointer font-medium transition-colors text-sm">
+                                Agtech</div>
                         </div>
                     </div>
 
@@ -221,9 +337,9 @@
                             document.getElementById('selected-specialty').innerText = val;
                             document.getElementById('specialty-options').classList.add('hidden');
                         }
-                        
+
                         // Close dropdown when clicking outside
-                        window.onclick = function(event) {
+                        window.onclick = function (event) {
                             if (!event.target.closest('#specialty-dropdown')) {
                                 document.getElementById('specialty-options').classList.add('hidden');
                             }
@@ -251,8 +367,7 @@
                         <img alt="Mentor Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Professional woman in business attire smiling warmly in a bright office setting with bokeh light background"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Mentor
@@ -296,8 +411,7 @@
                         <img alt="Aliado Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Professional man in a tailored suit posing confidently in a modern glass-walled corporate environment"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-[#2563eb] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Aliado
@@ -318,19 +432,19 @@
                                 class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold"
                                 style="">Scaling</span>
                         </div>
-                        <div class="flex items-center gap-4 pt-4 border-t border-surface-container">
-                            <a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="mail"
-                                    style="">mail</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
-                            </a>
-                            <a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="link"
-                                    style="">link</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
-                            </a>
+                        <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+                            <button onclick="openMentorModal('Mtro. Ricardo Arceo', 'Aliado', 'Alianzas Estratégicas', 'Cámara de Comercio', 'Especialista en networking y desarrollo de negocios B2B con más de 10 años de experiencia.', 'Lunes y Jueves', '1 - 3 hrs', 'Networking, B2B, Scaling', '48 sesiones')" 
+                                class="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+                                Ver Perfil
+                            </button>
+                            <div class="flex gap-2">
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                                </a>
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">link</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -341,8 +455,7 @@
                         <img alt="Tallerista Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Creative woman with glasses and colorful scarf smiling in an art studio filled with canvases and creative tools"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Tallerista
@@ -363,19 +476,19 @@
                                 class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold"
                                 style="">Prototipado</span>
                         </div>
-                        <div class="flex items-center gap-4 pt-4 border-t border-surface-container">
-                            <a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="mail"
-                                    style="">mail</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
-                            </a>
-                            <a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="link"
-                                    style="">link</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
-                            </a>
+                        <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+                            <button onclick="openMentorModal('Lic. Sofia Méndez', 'Tallerista', 'Metodologías Ágiles', 'Zapopan Creativa', 'Experta en Design Thinking y UX, apasionada por crear soluciones centradas en el usuario.', 'Martes y Viernes', '2 hrs', 'Design Thinking, UX, Prototipado', '32 sesiones')" 
+                                class="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+                                Ver Perfil
+                            </button>
+                            <div class="flex gap-2">
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                                </a>
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">link</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -387,8 +500,7 @@
                         <img alt="Mentor Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Charismatic man with gray hair and glasses smiling in a sun-drenched library or high-end office environment"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Mentor
@@ -409,19 +521,19 @@
                                 class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-semibold"
                                 style="">Cloud</span>
                         </div>
-                        <div class="flex items-center gap-4 pt-4 border-t border-surface-container">
-                            <a class="flex items-center gap-2 text-primary hover:text-primary-dim transition-colors"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="mail"
-                                    style="">mail</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">Email</span>
-                            </a>
-                            <a class="flex items-center gap-2 text-[#0077b5] hover:opacity-80 transition-opacity"
-                                href="#" style="">
-                                <span class="material-symbols-outlined text-[20px]" data-icon="link"
-                                    style="">link</span>
-                                <span class="text-xs font-bold uppercase tracking-wider" style="">LinkedIn</span>
-                            </a>
+                        <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+                            <button onclick="openMentorModal('Ing. Roberto Galván', 'Mentor', 'Inteligencia Artificial', 'Tech Hub Zapopan', 'Especialista en IA y Big Data con enfoque en arquitecturas escalables en la nube.', 'Miércoles y Sábado', '1 - 2 hrs', 'Python, Big Data, Cloud', '54 sesiones')" 
+                                class="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+                                Ver Perfil
+                            </button>
+                            <div class="flex gap-2">
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                                </a>
+                                <a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">link</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -432,8 +544,7 @@
                         <img alt="Tallerista Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Elegant woman in creative professional workspace, thoughtful expression, soft natural window light hitting her face"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Tallerista
@@ -477,8 +588,7 @@
                         <img alt="Aliado Portrait"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             data-alt="Professional mid-career man in casual business wear standing in a vibrant startup incubator with colorful graphics on walls"
-                            src="img/perfil_generico_card.svg"
-                            style="">
+                            src="img/perfil_generico_card.svg" style="">
                         <div class="absolute top-4 right-4 bg-[#2563eb] text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg"
                             style="">
                             Aliado
@@ -531,7 +641,8 @@
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black mb-6 relative z-10" style="">¿Eres mentor o aliado?
                 </h2>
-                <p class="text-lg mb-10 max-w-2xl mx-auto opacity-90 relative z-10" style="">Postúlate para acompañar a los emprendedores de Reto Zapopan como mentor o aliado estratégico.</p>
+                <p class="text-lg mb-10 max-w-2xl mx-auto opacity-90 relative z-10" style="">Postúlate para acompañar a
+                    los emprendedores de Reto Zapopan como mentor o aliado estratégico.</p>
                 <div class="flex flex-wrap justify-center gap-4 relative z-10">
                     <button
                         class="bg-surface-container-lowest text-primary px-10 py-4 rounded-2xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-xl"
@@ -547,7 +658,8 @@
     <footer class="w-full rounded-t-xl mt-20 bg-slate-50 dark:bg-slate-950">
         <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
             <div class="mb-6 md:mb-0">
-                <div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo" class="h-10 w-auto">
+                <div class="flex items-center mb-4"><img src="./img/logo-Zapopan.png" alt="Zapopan Logo"
+                        class="h-10 w-auto">
                 </div>
             </div>
             <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
@@ -561,10 +673,164 @@
                     href="#">Gobierno de Zapopan</a>
             </div>
             <div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm opacity-80 text-center md:text-right">
-                © 2026 Gobierno de Zapopan. Ciudad de las Niñas y los Niños.
+                © 2026 Gobierno de Zapopan.
             </div>
         </div>
     </footer>
+    <!-- Mentor Detail Modal -->
+    <div id="mentor-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
+        <div class="bg-white w-full max-w-4xl rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-in zoom-in-95 duration-300 relative">
+            <button onclick="closeMentorModal()" class="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition-all">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <!-- Panel Izquierdo -->
+            <div class="w-full md:w-[38%] bg-slate-50 p-8 flex flex-col items-center border-r border-slate-100">
+                <div class="relative w-44 h-44 rounded-3xl overflow-hidden shadow-xl mb-6">
+                    <img id="mentor-modal-img" src="img/perfil_generico_card.svg" class="w-full h-full object-cover">
+                    <div class="absolute bottom-2 right-2 w-5 h-5 bg-green-500 border-4 border-white rounded-full shadow-sm"></div>
+                </div>
+                <h2 id="mentor-modal-name" class="text-2xl font-black text-slate-800 text-center mb-1">Nombre</h2>
+                <p id="mentor-modal-specialty" class="text-primary font-bold mb-6 text-center text-sm uppercase tracking-wider">Especialidad</p>
+                
+                <div class="flex gap-3 mb-8">
+                    <button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-400 hover:text-primary transition-all border border-slate-100">
+                        <span class="material-symbols-outlined text-xl">mail</span>
+                    </button>
+                    <button class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-400 hover:text-primary transition-all border border-slate-100">
+                        <span class="material-symbols-outlined text-xl">share</span>
+                    </button>
+                </div>
+                
+                <div class="w-full space-y-4 pt-6 border-t border-slate-100">
+                    <div class="flex items-center gap-3 text-slate-500 text-xs font-medium">
+                        <span class="material-symbols-outlined text-primary text-lg">work</span>
+                        <span id="mentor-modal-company">Institución</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-500 text-xs font-medium">
+                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                        <span>Guadalajara, México</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-500 text-xs font-medium">
+                        <span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+                        <span>Mentor RZ desde 2021</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel Derecho -->
+            <div class="flex-1 p-8 md:p-12 overflow-y-auto max-h-[90vh]">
+                <div class="flex justify-between items-start mb-8 gap-4">
+                    <div class="flex-1">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Sobre el Mentor</h4>
+                        <p id="mentor-modal-bio" class="text-slate-600 text-sm leading-relaxed italic">Bio del mentor...</p>
+                    </div>
+                    <button onclick="bookMentorship()" class="bg-slate-800 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-slate-900 transition-all shadow-lg shrink-0">
+                        <span class="material-symbols-outlined text-lg">calendar_month</span>
+                        Agendar Mentoría
+                    </button>
+                </div>
+                
+                <div class="mb-10">
+                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Áreas de Expertise</h4>
+                    <div id="mentor-modal-chips" class="flex flex-wrap gap-2">
+                        <!-- Chips loaded via JS -->
+                    </div>
+                </div>
+                
+                <div class="mb-10">
+                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Disponibilidad</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm">
+                                <span class="material-symbols-outlined">event_available</span>
+                            </div>
+                            <div>
+                                <div id="mentor-modal-days" class="text-sm font-black text-slate-800">Lunes y Jueves</div>
+                                <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Días Disponibles</div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-blue-500 shadow-sm">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <div id="mentor-modal-hours" class="text-sm font-black text-slate-800">1 - 3 hrs</div>
+                                <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Horas por sesión</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-8 border-t border-slate-100 flex flex-wrap gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-teal-500 text-sm">chat</span>
+                        <span id="mentor-modal-sessions" class="text-xs font-bold text-slate-600">48 sesiones</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-teal-500 text-sm">check_circle</span>
+                        <span class="text-xs font-bold text-slate-600">100% respuesta</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-teal-500 text-sm">bolt</span>
+                        <span class="text-xs font-bold text-slate-600">&lt; 2h tiempo rpta.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMentorModal(name, role, specialty, company, bio, days, hours, chips, sessions) {
+            document.getElementById('mentor-modal-name').innerText = name;
+            document.getElementById('mentor-modal-specialty').innerText = specialty;
+            document.getElementById('mentor-modal-company').innerText = company;
+            document.getElementById('mentor-modal-bio').innerText = '"' + bio + '"';
+            document.getElementById('mentor-modal-days').innerText = days;
+            document.getElementById('mentor-modal-hours').innerText = hours;
+            document.getElementById('mentor-modal-sessions').innerText = sessions;
+            
+            // Build chips
+            const chipsContainer = document.getElementById('mentor-modal-chips');
+            chipsContainer.innerHTML = '';
+            const chipList = chips.split(', ');
+            const colors = ['bg-primary/10 text-primary', 'bg-blue-500/10 text-blue-600', 'bg-purple-500/10 text-purple-600', 'bg-teal-500/10 text-teal-600', 'bg-orange-500/10 text-orange-600'];
+            
+            chipList.forEach((chip, i) => {
+                const span = document.createElement('span');
+                span.className = `px-4 py-1.5 rounded-full text-xs font-bold ${colors[i % colors.length]}`;
+                span.innerText = chip;
+                chipsContainer.appendChild(span);
+            });
+            
+            const modal = document.getElementById('mentor-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMentorModal() {
+            const modal = document.getElementById('mentor-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function bookMentorship() {
+            alert('Redirigiendo al sistema de agendamiento para tu sesión de mentoría...');
+        }
+
+        // Close on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('mentor-modal');
+            if (event.target == modal) {
+                closeMentorModal();
+            }
+        }
+        
+        // Close on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMentorModal();
+        });
+    </script>
 </body>
 
 </html>

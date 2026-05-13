@@ -128,10 +128,10 @@
         <span class="text-xl font-headline font-black tracking-tighter text-on-surface-variant">RZ Hub</span>
       </a>
       <div class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="index.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Inicio</a>
         <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
         <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
-        <a href="perks.html" class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Perks y
-          Alianzas</a>
+        <a href="perks.html" class="text-[#E61876] border-b-2 border-[#E61876] pb-1 transition-colors">Perks y Alianzas</a>
         <a href="recursos.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Recursos</a>
         <a href="calendario.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Calendario</a>
       </div>
@@ -200,30 +200,32 @@
             <p class="text-on-tertiary-container/80 text-lg mt-2 font-medium" style="">Notion, Figma, Miro. Descuento o
               acceso gratuito para alumni verificados durante 12 meses.</p>
             <div class="flex gap-4 mt-8">
-              <button
-                class="bg-on-tertiary-container text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all"
-                style="">Activar beneficio</button>
-              <button class="text-on-tertiary-container font-bold px-4 py-3 underline decoration-2 underline-offset-4"
-                style="">Ver detalles</button>
+              <button onclick="openPerkModal()" class="bg-on-tertiary-container text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">bolt</span> Activar beneficio
+              </button>
+              <button class="text-on-tertiary-container font-bold px-4 py-3 underline decoration-2 underline-offset-4">Ver detalles</button>
             </div>
           </div>
         </div>
-        <!-- Legal y Fiscal (Orange) - Bento Tall -->
-        <div
-          class="md:col-span-5 bg-secondary-container rounded-xl p-8 flex flex-col justify-between hover:scale-[1.01] transition-transform duration-500">
-          <div>
+        <!-- Legal y Fiscal (Orange) - Bento Tall — ACTIVADO -->
+        <div class="md:col-span-5 bg-secondary-container rounded-xl p-8 flex flex-col justify-between relative overflow-hidden opacity-80">
+          <!-- Activated overlay -->
+          <div class="absolute inset-0 bg-white/30 pointer-events-none z-10"></div>
+          <div class="relative z-0">
             <div class="bg-white/40 w-fit p-4 rounded-3xl backdrop-blur-sm mb-8">
-              <span class="material-symbols-outlined text-4xl text-on-secondary-container" data-icon="gavel"
-                style="">gavel</span>
+              <span class="material-symbols-outlined text-4xl text-on-secondary-container grayscale">gavel</span>
             </div>
-            <h3 class="text-3xl font-black text-on-secondary-container" style="">Legal y Fiscal</h3>
-            <p class="text-on-secondary-container/80 text-lg mt-2 font-medium" style="">Despachos aliados de alto nivel.
-              1 sesión de asesoría gratuita por mes. El Hub valida la elegibilidad.</p>
+            <h3 class="text-3xl font-black text-on-secondary-container">Legal y Fiscal</h3>
+            <p class="text-on-secondary-container/80 text-lg mt-2 font-medium">Despachos aliados de alto nivel. 1 sesión de asesoría gratuita por mes. El Hub valida la elegibilidad.</p>
           </div>
-          <div class="mt-8 flex flex-col gap-3">
-            <button class="bg-on-secondary-container text-white w-full py-4 rounded-full font-bold" style="">Activar
-              beneficio</button>
-            <button class="text-on-secondary-container font-bold w-full py-2" style="">Ver detalles</button>
+          <div class="mt-8 relative z-0">
+            <div class="flex items-center justify-center gap-3 bg-white/60 border border-green-300 text-green-700 py-4 rounded-full">
+              <span class="material-symbols-outlined text-xl">check_circle</span>
+              <div>
+                <div class="font-black text-sm">Beneficio Activado</div>
+                <div class="text-[10px] uppercase tracking-widest font-bold opacity-70">12 de Mayo, 2026</div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Aceleradoras (Turquoise) -->
@@ -339,10 +341,101 @@
           href="#">Gobierno de Zapopan</a>
       </div>
       <div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm opacity-80 text-center md:text-right">
-        © 2026 Gobierno de Zapopan. Ciudad de las Niñas y los Niños.
+        © 2026 Gobierno de Zapopan.
       </div>
     </div>
   </footer>
+  <!-- AWS Activation Modal -->
+  <!-- AWS Activation Modal -->
+  <div id="perk-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-4xl rounded-[2.5rem] shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-[320px,1fr] relative">
+      <button onclick="closePerkModal()" class="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 transition-all">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <!-- Left Banner Section -->
+      <div class="bg-slate-900 p-10 flex flex-col items-center justify-center text-center relative overflow-hidden h-full">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#E61876]/20 to-transparent pointer-events-none"></div>
+        <div class="relative z-10">
+          <div class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mb-6 shadow-2xl mx-auto">
+            <span class="material-symbols-outlined text-4xl text-[#FF9900]">cloud</span>
+          </div>
+          <h3 class="text-white text-2xl font-black mb-2">AWS Activate</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Créditos de infraestructura cloud para Startups de Reto Zapopan.</p>
+        </div>
+      </div>
+
+      <!-- Right Content Section -->
+      <div class="p-8 md:p-12 flex flex-col justify-center">
+        <div class="mb-8">
+          <h3 class="text-3xl font-black text-slate-800 mb-2">$5,000 USD en créditos</h3>
+          <p class="text-slate-500 text-base leading-relaxed">Potencia tu startup con créditos exclusivos para la red Alumni RZ. Válido por 1 año desde la activación.</p>
+        </div>
+
+        <div class="space-y-6 mb-8">
+          <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Cómo activar tu beneficio:</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4 text-sm text-slate-600">
+              <span class="w-6 h-6 rounded-full bg-[#E61876]/10 text-[#E61876] flex items-center justify-center font-bold text-xs shrink-0">1</span>
+              <span>Crea una cuenta en <strong>AWS Activate</strong> si aún no tienes una.</span>
+            </li>
+            <li class="flex items-start gap-4 text-sm text-slate-600">
+              <span class="w-6 h-6 rounded-full bg-[#E61876]/10 text-[#E61876] flex items-center justify-center font-bold text-xs shrink-0">2</span>
+              <span>Ingresa el <strong>Organization ID</strong> de Reto Zapopan que aparece abajo.</span>
+            </li>
+            <li class="flex items-start gap-4 text-sm text-slate-600">
+              <span class="w-6 h-6 rounded-full bg-[#E61876]/10 text-[#E61876] flex items-center justify-center font-bold text-xs shrink-0">3</span>
+              <span>Espera confirmación por correo de AWS en <strong>3-5 días hábiles</strong>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 mb-8 flex items-center justify-between gap-4">
+          <div>
+            <div class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Tu Org ID / Código</div>
+            <code class="text-lg font-mono font-bold text-slate-800">RZ-AWS-START-2026</code>
+          </div>
+          <button onclick="copyCode()" id="copy-btn" class="bg-white border border-slate-200 text-slate-600 hover:text-[#E61876] hover:border-[#E61876] px-5 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 shadow-sm shrink-0">
+            <span class="material-symbols-outlined text-[18px]">content_copy</span> Copiar
+          </button>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 border-t border-slate-100">
+          <p class="text-[10px] text-slate-400 max-w-[240px] leading-relaxed italic">Válido para startups que no hayan recibido más de $10,000 USD previamente.</p>
+          <a href="https://aws.amazon.com/activate/" target="_blank" class="bg-[#E61876] text-white px-8 py-3.5 rounded-full text-sm font-bold flex items-center gap-2 hover:shadow-xl hover:shadow-[#E61876]/30 transition-all shrink-0">
+            Ir al portal de AWS <span class="material-symbols-outlined text-[20px]">open_in_new</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPerkModal() {
+      document.getElementById('perk-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePerkModal() {
+      document.getElementById('perk-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    function copyCode() {
+      navigator.clipboard.writeText('RZ-AWS-START-2026');
+      const btn = document.getElementById('copy-btn');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> Copiado';
+      btn.classList.add('text-green-600', 'border-green-400');
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">content_copy</span> Copiar';
+        btn.classList.remove('text-green-600', 'border-green-400');
+      }, 2000);
+    }
+    window.onclick = (e) => {
+      if (e.target === document.getElementById('perk-modal')) closePerkModal();
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePerkModal();
+    });
+  </script>
 </body>
 
 </html>

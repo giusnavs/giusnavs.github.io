@@ -129,6 +129,7 @@
         <span class="text-xl font-headline font-black tracking-tighter text-on-surface-variant">RZ Hub</span>
       </a>
       <div class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="index.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Inicio</a>
         <a href="alumni.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Alumni</a>
         <a href="mentores.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Mentores</a>
         <a href="perks.html" class="text-slate-600 hover:text-[#E61876] transition-colors">Perks y Alianzas</a>
@@ -162,107 +163,126 @@
         </div>
       </div>
     </section>
-    <!-- Bento Grid Resources Section -->
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
-      <!-- Highlight Text Card -->
-      <div
-        class="md:col-span-12 lg:col-span-4 flex flex-col justify-center p-8 bg-surface-container-high rounded-3xl border border-outline-variant/15">
-        <div class="mb-6">
-          <span
-            class="material-symbols-outlined text-4xl text-primary font-variation-settings-'FILL'-1">auto_awesome</span>
+    <!-- Categorization Filters -->
+    <section class="mb-12">
+        <div class="flex flex-wrap gap-4 border-b border-outline-variant/30 pb-4">
+            <button class="bg-primary text-white px-6 py-2 rounded-full font-bold text-sm shadow-md shadow-primary/20 transition-transform active:scale-95">Todos</button>
+            <button class="bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low border border-outline-variant/30 px-6 py-2 rounded-full font-bold text-sm transition-all">🔍 Validación</button>
+            <button class="bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low border border-outline-variant/30 px-6 py-2 rounded-full font-bold text-sm transition-all">🚀 Crecimiento</button>
+            <button class="bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low border border-outline-variant/30 px-6 py-2 rounded-full font-bold text-sm transition-all">📈 Escalamiento</button>
         </div>
-        <h2 class="text-3xl font-extrabold text-on-surface leading-tight mb-4">El contexto es el valor</h2>
-        <p class="text-on-surface-variant text-lg">
-          No es un archivo suelto. Cada recurso dice quién lo usó, en qué reto, y qué resultado tuvo. Eso lo convierte
-          en referencia viva.
-        </p>
-      </div>
-      <!-- Resource: Canvas -->
-      <div
-        class="md:col-span-6 lg:col-span-4 group relative bg-surface-container-lowest p-8 rounded-3xl transition-all hover:scale-[1.02] hover:shadow-xl border border-outline-variant/15">
-        <div class="flex justify-between items-start mb-12">
-          <span class="bg-[#7C4DFF]/10 text-[#7C4DFF] px-4 py-1 rounded-full text-sm font-bold">Template</span>
-          <span class="material-symbols-outlined text-3xl text-slate-300">note_add</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Canvas de modelo de negocio
-        </h3>
-        <p class="text-on-surface-variant mb-8">Plantilla Notion/PDF para estructurar una propuesta desde cero. Incluye
-          sección de diagnóstico, solución e impacto esperado.</p>
-        <div class="flex gap-3 mt-auto">
-          <button
-            class="flex-1 bg-primary text-white font-bold py-3 rounded-full text-sm transition-transform active:scale-95">Descargar</button>
-          <button
-            class="px-4 py-3 rounded-full border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Ver
-            en Notion</button>
-        </div>
-      </div>
-      <!-- Resource: Pitch Deck -->
-      <div
-        class="md:col-span-6 lg:col-span-4 group relative bg-surface-container-lowest p-8 rounded-3xl transition-all hover:scale-[1.02] hover:shadow-xl border border-outline-variant/15">
-        <div class="flex justify-between items-start mb-12">
-          <span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-sm font-bold">Pitch
-            Deck</span>
-          <span class="material-symbols-outlined text-3xl text-slate-300">present_to_all</span>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Pitch deck ejecutivo · 12 slides
-        </h3>
-        <p class="text-on-surface-variant mb-8">Estructura de presentación validada por jurados del Hub. Cada slide
-          tiene instrucciones de qué poner y por qué.</p>
-        <div class="flex gap-3 mt-auto">
-          <button
-            class="flex-1 bg-primary text-white font-bold py-3 rounded-full text-sm transition-transform active:scale-95">Descargar</button>
-          <button
-            class="px-4 py-3 rounded-full border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">Ver
-            en Notion</button>
-        </div>
-      </div>
-      <!-- Resource: Glossary (Turquoise accent) -->
-      <div
-        class="md:col-span-12 lg:col-span-6 group relative overflow-hidden bg-surface-container-lowest p-10 rounded-3xl transition-all hover:scale-[1.02] hover:shadow-xl border border-outline-variant/15">
-        <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
-          <div class="flex-1">
-            <span
-              class="bg-[#2563eb]/10 text-[#2563eb] px-4 py-1 rounded-full text-sm font-bold mb-6 inline-block">Guía</span>
-            <h3 class="text-3xl font-extrabold mb-4 group-hover:text-primary transition-colors">Glosario del ecosistema
-            </h3>
-            <p class="text-on-surface-variant text-lg mb-8">Qué significa SAFE, MOU, prototipo, validación, piloto. Todo
-              el lenguaje de la innovación sin rodeos.</p>
-            <div class="flex gap-3">
-              <button
-                class="bg-[#E61876] text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">Ver
-                Guía</button>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        
+        <!-- Resource Card 1 (Alumni Uploaded) -->
+        <div class="bg-surface-container-lowest rounded-3xl border border-outline-variant/20 p-6 shadow-sm hover:shadow-xl transition-shadow flex flex-col group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform"></div>
+            
+            <div class="mb-4 flex justify-between items-start">
+                <span class="bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">🚀 Crecimiento</span>
+                <span class="material-symbols-outlined text-outline-variant text-3xl">description</span>
             </div>
-          </div>
-          <div class="w-full md:w-1/3 aspect-square bg-[#2563eb]/5 rounded-2xl flex items-center justify-center">
-            <span class="material-symbols-outlined text-7xl text-[#2563eb]/40">dictionary</span>
-          </div>
-        </div>
-      </div>
-      <!-- Resource: Case Study (Rosa accent) -->
-      <div
-        class="md:col-span-12 lg:col-span-6 group relative overflow-hidden bg-surface-container-lowest p-10 rounded-3xl transition-all hover:scale-[1.02] hover:shadow-xl border border-outline-variant/15">
-        <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
-          <div class="flex-1">
-            <span
-              class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-sm font-bold mb-6 inline-block">Caso
-              real</span>
-            <h3 class="text-3xl font-extrabold mb-4 group-hover:text-primary transition-colors">Caso: Ciclovías
-              inteligentes 2025</h3>
-            <p class="text-on-surface-variant text-lg mb-8">Qué propusieron, cómo lo presentaron, qué les funcionó y qué
-              cambiarían. Narrado por el equipo ganador.</p>
-            <div class="flex gap-3">
-              <button
-                class="bg-[#E61876] text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">Leer
-                Historia</button>
+            
+            <h3 class="text-xl font-bold mb-2 text-on-surface group-hover:text-primary transition-colors">Pitch Deck Template (Seed)</h3>
+            <p class="text-on-surface-variant text-sm mb-6 flex-1">Plantilla estructurada para levantar ronda Semilla. Incluye proyecciones financieras básicas y narrativas clave.</p>
+            
+            <div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-2xl mb-6 border border-outline-variant/10">
+                <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">VM</div>
+                <div>
+                    <div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Aportado por Alumni</div>
+                    <div class="text-xs font-bold text-on-surface">Valeria Mendoza (EcoLoop)</div>
+                </div>
             </div>
-          </div>
-          <div class="w-full md:w-1/3 h-full rounded-2xl overflow-hidden shadow-inner">
-            <img alt="Smart Bike Paths" class="w-full h-full object-cover"
-              data-alt="Bicycle path in a futuristic city park with smart lighting and clean architectural lines at sunset"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB636s025YljiUeU0xPYRX55PaDtC5X4d1MKt9rOQHtVxEw13tweQv2CmsGNPu1eoFTCHjIqGNP_uIMljSuI7LWbDHLcZMOYda_rgYcMZDrApd-x3XCOMeCGc3SUy9ajK8tCX2ggfvD8RLqyNH-4dTDld_krwSaYShcVPdTxySaKuVnheQx5OonBpE0h_OYCOPttC2aJ146lCc7NqAZg9N8Rv2gRfkRdCmHUpEGKz4JYKxm0tlj93coChM4XtAsI-cWGPQOy51_y0f6" />
-          </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-1.5 text-on-surface-variant" title="Descargas">
+                    <span class="material-symbols-outlined text-lg text-success">download_done</span>
+                    <span class="text-xs font-bold">1,204</span>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="openPreviewModal('Pitch Deck Template (Seed)', 'Aportado por: Valeria Mendoza • Formato: PDF • 2.4 MB')" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Vista Previa">
+                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                    </button>
+                    <button class="bg-[#1e293b] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary transition-colors flex items-center gap-2">
+                        Descargar
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Resource Card 2 (Platform default) -->
+        <div class="bg-surface-container-lowest rounded-3xl border border-outline-variant/20 p-6 shadow-sm hover:shadow-xl transition-shadow flex flex-col group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform"></div>
+            
+            <div class="mb-4 flex justify-between items-start">
+                <span class="bg-warning-container text-on-warning-container text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">🔍 Validación</span>
+                <span class="material-symbols-outlined text-outline-variant text-3xl">table_chart</span>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-2 text-on-surface group-hover:text-primary transition-colors">Matriz de Lean Canvas</h3>
+            <p class="text-on-surface-variant text-sm mb-6 flex-1">Documento en Excel automatizado para validar tu modelo de negocio rápidamente y pivotar ideas.</p>
+            
+            <div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-2xl mb-6 border border-outline-variant/10">
+                <img src="./img/logo-Zapopan.png" class="w-8 h-8 object-contain">
+                <div>
+                    <div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Recurso Oficial</div>
+                    <div class="text-xs font-bold text-on-surface">Equipo Reto Zapopan</div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-1.5 text-on-surface-variant" title="Descargas">
+                    <span class="material-symbols-outlined text-lg text-success">download_done</span>
+                    <span class="text-xs font-bold">3,542</span>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="openPreviewModal('Matriz de Lean Canvas', 'Aportado por: Reto Zapopan • Formato: XLSX • 1.1 MB')" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Vista Previa">
+                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                    </button>
+                    <button class="bg-[#1e293b] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary transition-colors flex items-center gap-2">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource Card 3 -->
+        <div class="bg-surface-container-lowest rounded-3xl border border-outline-variant/20 p-6 shadow-sm hover:shadow-xl transition-shadow flex flex-col group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-tertiary/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform"></div>
+            
+            <div class="mb-4 flex justify-between items-start">
+                <span class="bg-purple-100 text-purple-700 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">📈 Escalamiento</span>
+                <span class="material-symbols-outlined text-outline-variant text-3xl">picture_as_pdf</span>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-2 text-on-surface group-hover:text-primary transition-colors">Term Sheet Estándar MX</h3>
+            <p class="text-on-surface-variant text-sm mb-6 flex-1">Borrador de Term Sheet adaptado a la legislación mexicana para rondas de inversión Serie A.</p>
+            
+            <div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-2xl mb-6 border border-outline-variant/10">
+                <div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container text-xs font-bold">RO</div>
+                <div>
+                    <div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Aportado por Alumni</div>
+                    <div class="text-xs font-bold text-on-surface">Roberto Ortiz (LegalTech)</div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-1.5 text-on-surface-variant" title="Descargas">
+                    <span class="material-symbols-outlined text-lg text-success">download_done</span>
+                    <span class="text-xs font-bold">850</span>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="openPreviewModal('Term Sheet Estándar MX', 'Aportado por: Roberto Ortiz • Formato: PDF • 3.5 MB')" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="Vista Previa">
+                        <span class="material-symbols-outlined text-[20px]">visibility</span>
+                    </button>
+                    <button class="bg-[#1e293b] text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-primary transition-colors flex items-center gap-2">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Final CTA Section -->
     <section
@@ -303,10 +323,95 @@
           href="#">Gobierno de Zapopan</a>
       </div>
       <div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-sm opacity-80 text-center md:text-right">
-        © 2026 Gobierno de Zapopan. Ciudad de las Niñas y los Niños.
+        © 2026 Gobierno de Zapopan.
       </div>
     </div>
   </footer>
+  <!-- PREVIEW MODAL -->
+  <div id="preview-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+      <div class="bg-white w-full max-w-5xl h-[85vh] rounded-[2rem] shadow-2xl overflow-hidden flex flex-col relative transition-transform duration-300">
+          
+          <!-- Modal Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-6 border-b border-outline-variant/20 bg-surface-container-low shrink-0 gap-4">
+              <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-2xl">description</span>
+                  </div>
+                  <div>
+                      <h3 id="preview-title" class="text-lg font-black text-on-surface leading-none mb-1">Cargando...</h3>
+                      <div id="preview-meta" class="text-xs text-on-surface-variant font-medium">Aportado por: -</div>
+                  </div>
+              </div>
+              <div class="flex items-center gap-4">
+                  <button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary-dim transition-colors flex items-center gap-2">
+                      <span class="material-symbols-outlined text-lg">download</span>
+                      Descargar
+                  </button>
+                  <button onclick="closePreviewModal()" class="w-10 h-10 bg-surface-container-lowest border border-outline-variant/30 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+                      <span class="material-symbols-outlined">close</span>
+                  </button>
+              </div>
+          </div>
+
+          <!-- Fake Document Viewer Area -->
+          <div class="flex-1 bg-surface-container-high p-4 md:p-8 overflow-y-auto flex justify-center relative">
+              <!-- Simulated Document Page -->
+              <div class="w-full max-w-3xl bg-surface-container-lowest aspect-[1/1.4] shadow-md border border-outline-variant/30 relative p-8 md:p-12">
+                  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8cGF0aCBkPSJNMCAyMEg0ME0yMCAwVjQwIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=')] opacity-30"></div>
+                  
+                  <div class="relative z-10 opacity-30">
+                      <div class="w-1/3 h-8 bg-on-surface rounded mb-12"></div>
+                      <div class="w-full h-4 bg-outline rounded mb-4"></div>
+                      <div class="w-5/6 h-4 bg-outline rounded mb-4"></div>
+                      <div class="w-4/6 h-4 bg-outline rounded mb-16"></div>
+                      
+                      <div class="grid grid-cols-2 gap-8">
+                          <div class="aspect-video bg-outline-variant rounded-xl"></div>
+                          <div class="aspect-video bg-outline-variant rounded-xl"></div>
+                      </div>
+                  </div>
+                  
+                  <!-- Watermark -->
+                  <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                      <span class="text-4xl md:text-6xl font-black -rotate-45 text-on-surface">VISTA PREVIA</span>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Modal Footer -->
+          <div class="p-4 bg-surface-container-lowest border-t border-outline-variant/20 flex justify-between items-center text-xs font-bold text-on-surface-variant px-8 shrink-0">
+              <span>Página 1 de 12</span>
+              <div class="flex gap-4">
+                  <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">zoom_out</span></button>
+                  <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">zoom_in</span></button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      function openPreviewModal(title, metaInfo) {
+          document.getElementById('preview-title').innerText = title;
+          document.getElementById('preview-meta').innerText = metaInfo;
+          document.getElementById('preview-modal').classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+      }
+      function closePreviewModal() {
+          document.getElementById('preview-modal').classList.add('hidden');
+          document.body.style.overflow = 'auto';
+      }
+      // Cerrar modal al hacer click fuera
+      window.onclick = function(event) {
+          const modal = document.getElementById('preview-modal');
+          if (event.target == modal) {
+              closePreviewModal();
+          }
+      }
+      // Cerrar modal con la tecla Escape
+      document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closePreviewModal();
+      });
+  </script>
 </body>
 
 </html>
