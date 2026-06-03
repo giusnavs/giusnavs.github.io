@@ -112,8 +112,7 @@
 
     /* Lock overlay */
     .lock-overlay {
-      background: rgba(248, 250, 252, 0.85);
-      backdrop-filter: blur(2px);
+      background: rgba(248, 250, 252, 0.15);
     }
 
     /* Modal */
@@ -187,7 +186,7 @@
         <a href="#calendario" class="nav-link text-slate-600">Calendario</a>
       </div>
       <!-- CTA -->
-      <button onclick="openModal()"
+      <button id="nav-login-btn" onclick="openModal()"
         class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primary-dim hover:scale-105 transition-all shadow-md shadow-primary/20">
         Ingresar
       </button>
@@ -223,7 +222,7 @@
               junto a la comunidad emprendedora más activa de Jalisco.
             </p>
             <div class="flex flex-wrap gap-4">
-              <button onclick="openModal()"
+              <button id="hero-login-btn" onclick="openModal()"
                 class="bg-primary text-white font-bold px-8 py-4 rounded-2xl hover:bg-primary-dim hover:scale-105 transition-all shadow-xl shadow-primary/25 text-base">
                 Quiero acceder
               </button>
@@ -281,76 +280,49 @@
           </p>
         </div>
 
-        <!-- Teaser grid — silhouette cards -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
-          <!-- Card silhouette x4 -->
-          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 relative">
-            <div class="avatar-silhouette h-40 w-full"></div>
-            <div class="p-5 space-y-3">
-              <div class="blur-line w-3/4"></div>
-              <div class="blur-line blur-line-sm w-1/2"></div>
-              <div class="flex gap-2 mt-1">
-                <div class="blur-line blur-line-xs w-16 rounded-full"></div>
-                <div class="blur-line blur-line-xs w-12 rounded-full"></div>
-              </div>
-            </div>
-            <div class="lock-overlay absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <span class="material-symbols-outlined text-4xl text-slate-400">lock</span>
-              <button onclick="openModal()"
-                class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-primary-dim transition-colors">Inicia
-                sesión</button>
-            </div>
+        <!-- New Alumni CTA Banner -->
+        <div
+          class="relative bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden mb-12 flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <!-- Ambient gradient orbs inside the card -->
+          <div
+            class="absolute -right-20 -top-20 w-60 h-60 bg-primary/5 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/8 transition-all duration-500">
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 relative">
-            <div class="avatar-silhouette h-40 w-full"></div>
-            <div class="p-5 space-y-3">
-              <div class="blur-line w-2/3"></div>
-              <div class="blur-line blur-line-sm w-2/5"></div>
-              <div class="flex gap-2 mt-1">
-                <div class="blur-line blur-line-xs w-14 rounded-full"></div>
-                <div class="blur-line blur-line-xs w-16 rounded-full"></div>
-              </div>
-            </div>
-            <div class="lock-overlay absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <span class="material-symbols-outlined text-4xl text-slate-400">lock</span>
-              <button onclick="openModal()"
-                class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-primary-dim transition-colors">Inicia
-                sesión</button>
-            </div>
+          <div
+            class="absolute -left-20 -bottom-20 w-60 h-60 bg-secondary/5 rounded-full blur-3xl pointer-events-none group-hover:bg-secondary/8 transition-all duration-500">
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 relative">
-            <div class="avatar-silhouette h-40 w-full"></div>
-            <div class="p-5 space-y-3">
-              <div class="blur-line w-3/5"></div>
-              <div class="blur-line blur-line-sm w-1/3"></div>
-              <div class="flex gap-2 mt-1">
-                <div class="blur-line blur-line-xs w-18 rounded-full"></div>
-                <div class="blur-line blur-line-xs w-10 rounded-full"></div>
+
+          <div class="relative z-10 space-y-4 max-w-xl">
+            <div class="flex items-center gap-3">
+              <!-- Overlapping avatars preview -->
+              <div class="flex -space-x-3">
+                <div
+                  class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-pink-500 border-2 border-white flex items-center justify-center text-[10px] font-black text-white">
+                  V</div>
+                <div
+                  class="w-9 h-9 rounded-full bg-gradient-to-br from-secondary to-blue-500 border-2 border-white flex items-center justify-center text-[10px] font-black text-white">
+                  R</div>
+                <div
+                  class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 border-2 border-white flex items-center justify-center text-[10px] font-black text-white">
+                  E</div>
+                <div
+                  class="w-9 h-9 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-slate-600 font-headline">
+                  +1.2k</div>
               </div>
+              <span class="text-xs font-bold text-slate-500">Directorio de egresados activo</span>
             </div>
-            <div class="lock-overlay absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <span class="material-symbols-outlined text-4xl text-slate-400">lock</span>
-              <button onclick="openModal()"
-                class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-primary-dim transition-colors">Inicia
-                sesión</button>
-            </div>
+            <h3 class="text-2xl font-black text-slate-900 leading-tight">¿Quieres explorar la red de founders?</h3>
+            <p class="text-sm text-slate-500 font-medium leading-relaxed">
+              Inicia sesión para desbloquear la búsqueda avanzada, ver los perfiles detallados de más de 1,200 alumni y
+              contactar directamente a los emprendedores por chat.
+            </p>
           </div>
-          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 relative">
-            <div class="avatar-silhouette h-40 w-full"></div>
-            <div class="p-5 space-y-3">
-              <div class="blur-line w-4/5"></div>
-              <div class="blur-line blur-line-sm w-1/2"></div>
-              <div class="flex gap-2 mt-1">
-                <div class="blur-line blur-line-xs w-12 rounded-full"></div>
-                <div class="blur-line blur-line-xs w-20 rounded-full"></div>
-              </div>
-            </div>
-            <div class="lock-overlay absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <span class="material-symbols-outlined text-4xl text-slate-400">lock</span>
-              <button onclick="openModal()"
-                class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-primary-dim transition-colors">Inicia
-                sesión</button>
-            </div>
+
+          <div class="relative z-10 shrink-0">
+            <button onclick="goToAlumni()"
+              class="inline-flex items-center gap-3 bg-primary text-white font-black px-8 py-4 rounded-2xl hover:bg-primary-dim hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20 text-sm group-hover:shadow-primary/30">
+              <span>Explorar Directorio Alumni</span>
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
           </div>
         </div>
 
@@ -375,105 +347,89 @@
       <div class="max-w-screen-xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <!-- Text -->
-          <div class="max-w-xl">
+          <!-- Text -->
+          <div class="max-w-xl space-y-6">
             <span
-              class="inline-block bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">Mentores
+              class="inline-block bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">Mentores
               y Aliados</span>
-            <h2 class="text-4xl font-black text-slate-900 leading-tight mb-5">Expertos listos para guiar tu startup</h2>
-            <p class="text-slate-500 text-lg font-medium leading-relaxed mb-8">
+            <h2 class="text-4xl font-black text-slate-900 leading-tight">Expertos listos para guiar tu startup</h2>
+            <p class="text-slate-500 text-lg font-medium leading-relaxed">
               El directorio de mentores te da acceso a profesionales especializados en las áreas más críticas del
-              emprendimiento: finanzas, tecnología, marketing, legal, ventas y más. Filtra por área de especialidad, lee
-              su trayectoria completa y solicita sesiones de mentoría directamente desde la plataforma.
+              emprendimiento. Filtra por área, lee su trayectoria completa y solicita sesiones de mentoría directamente
+              desde la plataforma.
             </p>
-            <div class="space-y-4">
-              <div class="flex items-center gap-4 bg-slate-50 rounded-2xl p-4">
-                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-secondary text-xl">filter_list</span>
-                </div>
-                <p class="text-sm font-semibold text-slate-700">Filtra por área: Finanzas, Legal, Tech, Marketing,
-                  Ventas y más</p>
-              </div>
-              <div class="flex items-center gap-4 bg-slate-50 rounded-2xl p-4">
-                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-secondary text-xl">calendar_month</span>
-                </div>
-                <p class="text-sm font-semibold text-slate-700">Agenda sesiones de mentoría en el horario de tu
-                  preferencia</p>
-              </div>
-              <div class="flex items-center gap-4 bg-slate-50 rounded-2xl p-4">
-                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-secondary text-xl">handshake</span>
-                </div>
-                <p class="text-sm font-semibold text-slate-700">Conecta también con aliados institucionales del
-                  ecosistema</p>
-              </div>
-            </div>
           </div>
 
-          <!-- Teaser cards -->
+          <!-- Teaser cards (Combined with member lock) -->
           <div class="space-y-4">
-            <!-- Mentor card silhouette x3 -->
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative">
-              <div class="flex gap-5 p-5">
-                <div class="avatar-silhouette w-16 h-16 rounded-2xl shrink-0 border-2 border-white shadow"></div>
-                <div class="flex-1 space-y-2.5 pt-1">
-                  <div class="blur-line w-2/5"></div>
-                  <div class="blur-line blur-line-sm w-3/5"></div>
-                  <div class="flex gap-2 mt-2">
-                    <div class="blur-line blur-line-xs w-14 rounded-full"></div>
-                    <div class="blur-line blur-line-xs w-12 rounded-full"></div>
-                  </div>
+
+            <!-- Card 1: Filtros -->
+            <div class="bg-slate-50 rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative group/card">
+              <div class="flex gap-5 p-6">
+                <div
+                  class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 text-secondary">
+                  <span class="material-symbols-outlined text-2xl">filter_alt</span>
+                </div>
+                <div class="flex-1 space-y-1">
+                  <h4 class="font-bold text-slate-800">Filtrar por Área de Especialidad</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed">Encuentra asesoría en Finanzas, Legal, Tech,
+                    Marketing, Ventas y más.</p>
                 </div>
               </div>
-              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-6">
                 <button onclick="openModal()"
-                  class="flex items-center gap-2 bg-slate-100 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-colors">
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-secondary hover:text-secondary transition-colors shadow-sm">
                   <span class="material-symbols-outlined text-sm">lock</span> Solo para miembros
                 </button>
               </div>
             </div>
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative">
-              <div class="flex gap-5 p-5">
-                <div class="avatar-silhouette w-16 h-16 rounded-2xl shrink-0 border-2 border-white shadow"></div>
-                <div class="flex-1 space-y-2.5 pt-1">
-                  <div class="blur-line w-1/3"></div>
-                  <div class="blur-line blur-line-sm w-2/3"></div>
-                  <div class="flex gap-2 mt-2">
-                    <div class="blur-line blur-line-xs w-16 rounded-full"></div>
-                    <div class="blur-line blur-line-xs w-10 rounded-full"></div>
-                  </div>
+
+            <!-- Card 2: Agenda -->
+            <div class="bg-slate-50 rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative group/card">
+              <div class="flex gap-5 p-6">
+                <div
+                  class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 text-secondary">
+                  <span class="material-symbols-outlined text-2xl">calendar_month</span>
+                </div>
+                <div class="flex-1 space-y-1">
+                  <h4 class="font-bold text-slate-800">Conecta y Agenda Sesiones</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed">Reserva mentorías 1-a-1.</p>
                 </div>
               </div>
-              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-6">
                 <button onclick="openModal()"
-                  class="flex items-center gap-2 bg-slate-100 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-colors">
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-secondary hover:text-secondary transition-colors shadow-sm">
                   <span class="material-symbols-outlined text-sm">lock</span> Solo para miembros
                 </button>
               </div>
             </div>
-            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative">
-              <div class="flex gap-5 p-5">
-                <div class="avatar-silhouette w-16 h-16 rounded-2xl shrink-0 border-2 border-white shadow"></div>
-                <div class="flex-1 space-y-2.5 pt-1">
-                  <div class="blur-line w-2/5"></div>
-                  <div class="blur-line blur-line-sm w-1/2"></div>
-                  <div class="flex gap-2 mt-2">
-                    <div class="blur-line blur-line-xs w-12 rounded-full"></div>
-                    <div class="blur-line blur-line-xs w-18 rounded-full"></div>
-                  </div>
+
+            <!-- Card 3: Aliados -->
+            <div class="bg-slate-50 rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative group/card">
+              <div class="flex gap-5 p-6">
+                <div
+                  class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 text-secondary">
+                  <span class="material-symbols-outlined text-2xl">handshake</span>
+                </div>
+                <div class="flex-1 space-y-1">
+                  <h4 class="font-bold text-slate-800">Aliados Institucionales</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed">Vinculación directa con cámaras empresariales y
+                    consultores especializados.</p>
                 </div>
               </div>
-              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-6">
                 <button onclick="openModal()"
-                  class="flex items-center gap-2 bg-slate-100 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-colors">
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-xs font-bold px-4 py-2 rounded-full border border-slate-200 hover:border-secondary hover:text-secondary transition-colors shadow-sm">
                   <span class="material-symbols-outlined text-sm">lock</span> Solo para miembros
                 </button>
               </div>
             </div>
-            <button onclick="openModal()"
-              class="w-full border-2 border-dashed border-slate-200 rounded-2xl py-5 text-sm font-bold text-slate-400 hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
-              <span class="material-symbols-outlined">add</span> Ver directorio completo — inicia sesión
+
+            <button onclick="goToMentores()"
+              class="w-full border-2 border-dashed border-slate-200 rounded-2xl py-5 text-sm font-bold text-slate-400 hover:border-secondary hover:text-secondary transition-colors flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined">group</span> Ver todos los mentores — inicia sesión
             </button>
+
           </div>
         </div>
       </div>
@@ -696,63 +652,80 @@
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           <!-- Teaser list -->
           <div class="space-y-4 order-2 lg:order-1">
+
+            <!-- Card 1: Guías -->
             <div
-              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100">
+              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100 group/card">
               <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-primary">description</span>
+                <span class="material-symbols-outlined text-primary text-2xl">description</span>
               </div>
-              <div class="flex-1 space-y-2">
-                <div class="blur-line w-3/5"></div>
-                <div class="blur-line blur-line-xs w-1/4 rounded-full"></div>
+              <div class="flex-1 space-y-0.5">
+                <h4 class="font-bold text-slate-800 text-sm">Guías y Manuales de Emprendimiento</h4>
+                <p class="text-xs text-slate-500">Materiales prácticos para validar ideas y estructurar tu negocio.</p>
               </div>
-              <button onclick="openModal()"
-                class="shrink-0 w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-slate-500 text-lg">lock</span>
-              </button>
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+                <button onclick="openModal()"
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-[10px] font-bold px-3 py-1.5 rounded-full border border-slate-200 hover:border-primary hover:text-primary transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-xs">lock</span> Miembros
+                </button>
+              </div>
             </div>
+
+            <!-- Card 2: Plantillas -->
             <div
-              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100">
+              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100 group/card">
               <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-secondary">table_chart</span>
+                <span class="material-symbols-outlined text-secondary text-2xl">table_chart</span>
               </div>
-              <div class="flex-1 space-y-2">
-                <div class="blur-line w-2/3"></div>
-                <div class="blur-line blur-line-xs w-1/5 rounded-full"></div>
+              <div class="flex-1 space-y-0.5">
+                <h4 class="font-bold text-slate-800 text-sm">Plantillas y Formatos Descargables</h4>
+                <p class="text-xs text-slate-500">Modelos financieros, contratos estándar y canvases de negocio.</p>
               </div>
-              <button onclick="openModal()"
-                class="shrink-0 w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-slate-500 text-lg">lock</span>
-              </button>
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+                <button onclick="openModal()"
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-[10px] font-bold px-3 py-1.5 rounded-full border border-slate-200 hover:border-secondary hover:text-secondary transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-xs">lock</span> Miembros
+                </button>
+              </div>
             </div>
+
+            <!-- Card 3: Masterclasses -->
             <div
-              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100">
+              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100 group/card">
               <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-green-700">video_library</span>
+                <span class="material-symbols-outlined text-green-700 text-2xl">video_library</span>
               </div>
-              <div class="flex-1 space-y-2">
-                <div class="blur-line w-4/5"></div>
-                <div class="blur-line blur-line-xs w-1/4 rounded-full"></div>
+              <div class="flex-1 space-y-0.5">
+                <h4 class="font-bold text-slate-800 text-sm">Masterclasses y Videos Exclusivos</h4>
+                <p class="text-xs text-slate-500">Talleres y ponencias impartidas por expertos de la industria.</p>
               </div>
-              <button onclick="openModal()"
-                class="shrink-0 w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-slate-500 text-lg">lock</span>
-              </button>
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+                <button onclick="openModal()"
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-[10px] font-bold px-3 py-1.5 rounded-full border border-slate-200 hover:border-green-600 hover:text-green-600 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-xs">lock</span> Miembros
+                </button>
+              </div>
             </div>
+
+            <!-- Card 4: Presentaciones -->
             <div
-              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100">
+              class="bg-slate-50 rounded-2xl p-5 flex items-center gap-5 relative overflow-hidden border border-slate-100 group/card">
               <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-yellow-700">slideshow</span>
+                <span class="material-symbols-outlined text-yellow-700 text-2xl">slideshow</span>
               </div>
-              <div class="flex-1 space-y-2">
-                <div class="blur-line w-1/2"></div>
-                <div class="blur-line blur-line-xs w-1/6 rounded-full"></div>
+              <div class="flex-1 space-y-0.5">
+                <h4 class="font-bold text-slate-800 text-sm">Presentaciones y Pitch Decks</h4>
+                <p class="text-xs text-slate-500">Ejemplos de decks reales exitosos de startups aceleradas.</p>
               </div>
-              <button onclick="openModal()"
-                class="shrink-0 w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-slate-500 text-lg">lock</span>
-              </button>
+              <div class="lock-overlay absolute inset-0 flex items-center justify-end pr-5">
+                <button onclick="openModal()"
+                  class="flex items-center gap-2 bg-white/90 text-slate-500 text-[10px] font-bold px-3 py-1.5 rounded-full border border-slate-200 hover:border-yellow-600 hover:text-yellow-600 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-xs">lock</span> Miembros
+                </button>
+              </div>
             </div>
-            <button onclick="openModal()"
+
+            <button onclick="goToRecursos()"
               class="w-full border-2 border-dashed border-slate-200 rounded-2xl py-5 text-sm font-bold text-slate-400 hover:border-primary hover:text-primary transition-colors flex items-center justify-center gap-2">
               <span class="material-symbols-outlined">library_books</span> Ver todos los recursos — inicia sesión
             </button>
@@ -769,24 +742,6 @@
               curadas por el equipo de Reto Zapopan. Desde cómo validar tu idea de negocio hasta cómo prepararte para
               una ronda de inversión — tenemos contenido para cada momento de tu startup.
             </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-slate-50 rounded-2xl p-5 text-center">
-                <span class="material-symbols-outlined text-3xl text-primary mb-2">description</span>
-                <p class="text-sm font-bold text-slate-700">Guías y manuales</p>
-              </div>
-              <div class="bg-slate-50 rounded-2xl p-5 text-center">
-                <span class="material-symbols-outlined text-3xl text-secondary mb-2">table_chart</span>
-                <p class="text-sm font-bold text-slate-700">Plantillas descargables</p>
-              </div>
-              <div class="bg-slate-50 rounded-2xl p-5 text-center">
-                <span class="material-symbols-outlined text-3xl text-green-600 mb-2">play_circle</span>
-                <p class="text-sm font-bold text-slate-700">Masterclasses en video</p>
-              </div>
-              <div class="bg-slate-50 rounded-2xl p-5 text-center">
-                <span class="material-symbols-outlined text-3xl text-yellow-600 mb-2">slideshow</span>
-                <p class="text-sm font-bold text-slate-700">Presentaciones y decks</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -965,6 +920,7 @@
     function closeModal() {
       document.getElementById('modal-backdrop').classList.add('hidden');
       document.getElementById('modal-backdrop').classList.remove('flex');
+      sessionStorage.removeItem('loginRedirect');
     }
     function handleBackdropClick(e) {
       if (e.target === document.getElementById('modal-backdrop')) closeModal();
@@ -972,8 +928,54 @@
     function handleLogin() {
       const btn = event.currentTarget;
       btn.textContent = 'Ingresando...';
-      setTimeout(() => { window.location.href = 'hub.html'; }, 800);
+      sessionStorage.setItem('isLoggedIn', 'true');
+      const redirect = sessionStorage.getItem('loginRedirect') || 'hub.html';
+      sessionStorage.removeItem('loginRedirect');
+      setTimeout(() => { window.location.href = redirect; }, 800);
     }
+    function goToAlumni() {
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        window.location.href = 'alumni.html';
+      } else {
+        sessionStorage.setItem('loginRedirect', 'alumni.html');
+        openModal();
+      }
+    }
+    function goToMentores() {
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        window.location.href = 'mentores.html';
+      } else {
+        sessionStorage.setItem('loginRedirect', 'mentores.html');
+        openModal();
+      }
+    }
+    function goToRecursos() {
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        window.location.href = 'recursos.html';
+      } else {
+        sessionStorage.setItem('loginRedirect', 'recursos.html');
+        openModal();
+      }
+    }
+
+    // Check auth state on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+      if (isLoggedIn) {
+        // Update nav button
+        const navBtn = document.getElementById('nav-login-btn');
+        if (navBtn) {
+          navBtn.textContent = 'Ir al Hub';
+          navBtn.setAttribute('onclick', "window.location.href='hub.html'");
+        }
+        // Update hero button
+        const heroBtn = document.getElementById('hero-login-btn');
+        if (heroBtn) {
+          heroBtn.textContent = 'Ir al Hub';
+          heroBtn.setAttribute('onclick', "window.location.href='hub.html'");
+        }
+      }
+    });
 
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
